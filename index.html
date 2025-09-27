@@ -14,13 +14,15 @@
     :root { --ring: 0 0 0 3px rgb(124 58 237 / 35%); }
     html { scroll-behavior: smooth; }
     body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial; }
-    /* Fondo llamativo */
     .bg-hero {
       background: radial-gradient(1200px 600px at 10% -10%, rgba(147,51,234,.25), transparent 60%),
                   radial-gradient(900px 500px at 90% 0%, rgba(99,102,241,.18), transparent 60%),
                   linear-gradient(180deg, #faf5ff 0%, #ffffff 30%, #ffffff 100%);
     }
     .chip { @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold; }
+    .card { @apply group rounded-2xl border border-lime-300 bg-white shadow-sm hover:shadow-md transition overflow-hidden; }
+    .img-wrap { @apply w-full aspect-video overflow-hidden; }
+    .img-wrap img { @apply w-full h-full object-cover; }
   </style>
 </head>
 <body class="min-h-screen text-white bg-gradient-to-b from-indigo-950 via-fuchsia-900 to-rose-900">
@@ -54,22 +56,20 @@
     </div>
   </header>
 
-  <!-- Hero ilustrado -->
+  <!-- Hero -->
   <section class="relative overflow-hidden bg-hero">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16 grid lg:grid-cols-2 gap-10 items-center">
       <div>
         <p class="inline-flex items-center gap-2 rounded-full border border-indigo-200 bg-indigo-50 px-3 py-1 text-xs text-indigo-700">Nuevo</p>
         <h1 class="mt-3 text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight">Seguridad y <span class="text-indigo-600">confianza</span> para tus plataformas</h1>
-        <p class="mt-3 text-slate-600 max-w-prose">Catálogo con precios por <strong>1 mes</strong>, <strong>3 meses</strong> y <strong>1 año</strong>. Contacto directo por WhatsApp. Solo orientación y soporte para contratación <strong>oficial</strong>.</p>
+        <p class="mt-3 text-slate-300 max-w-prose">Catálogo con precios por <strong>1 mes</strong>, <strong>3 meses</strong> y <strong>1 año</strong>. Contacto directo por WhatsApp. Solo orientación y soporte para contratación <strong>oficial</strong>.</p>
         <div class="mt-6 flex flex-col sm:flex-row gap-3">
-          <a href="#catalogo" class="px-5 py-3 rounded-xl bg-indigo-600 text-white hover:bg-indigo-700 font-semibold">Ver catálogo</a>
+          <a href="#catalogo" class="px-5 py-3 rounded-xl bg-fuchsia-600 text-white hover:bg-fuchsia-700 font-semibold">Ver catálogo</a>
           <a id="btnWhatsHero" target="_blank" rel="noopener" class="px-5 py-3 rounded-xl border border-slate-300 hover:border-emerald-500 font-semibold">Escríbenos al WhatsApp</a>
         </div>
-        <p class="mt-4 text-xs text-slate-500">WhatsApp: <span class="font-semibold">+51 929 162 254</span></p>
+        <p class="mt-4 text-xs text-slate-300">WhatsApp: <span class="font-semibold">+51 929 162 254</span></p>
       </div>
-      <!-- Mosaico de logos estilo ejemplo -->
       <div class="grid grid-cols-4 sm:grid-cols-5 gap-3">
-        <!-- Usamos íconos libres (placeholders genéricos) -->
         <div class="aspect-square rounded-xl border border-slate-200 bg-white flex items-center justify-center text-sm font-bold">YT</div>
         <div class="aspect-square rounded-xl border border-slate-200 bg-white flex items-center justify-center text-sm font-bold">NFLX</div>
         <div class="aspect-square rounded-xl border border-slate-200 bg-white flex items-center justify-center text-sm font-bold">Prime</div>
@@ -84,20 +84,19 @@
     </div>
   </section>
 
-  <!-- Catálogo con 1 mes / 3 meses / 1 año -->
-  <section id="catalogo" class="py-16 lg:py-20 bg-gradient-to-b from-white via-fuchsia-50/40 to-white">
+  <!-- Catálogo -->
+  <section id="catalogo" class="py-16 lg:py-20 bg-transparent">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <h2 class="text-3xl font-extrabold tracking-tight text-center">Catálogo</h2>
-      <p class="mt-2 text-center text-slate-600 max-w-2xl mx-auto">Elige tu plataforma y periodo. El mensaje de WhatsApp sale listo con el plan y precio.</p>
+      <p class="mt-2 text-center text-white/80 max-w-2xl mx-auto">Elige tu plataforma y periodo. El mensaje de WhatsApp sale listo con el plan y precio.</p>
 
       <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="gridProductos">
-        <!-- TEMPLATE DE TARJETA: copia y ajusta precios en data-* y spans -->
-        
-        <article class="group rounded-2xl border border-lime-300 bg-white shadow-sm hover:shadow-md transition overflow-hidden">
+        <!-- YouTube -->
+        <article class="card">
           <div class="px-6 pt-4 pb-3 bg-gradient-to-r from-rose-500 via-fuchsia-500 to-indigo-600 text-white font-extrabold text-center">YOUTUBE PREMIUM</div>
-          <img class="w-full aspect-[16/9] object-cover" alt="YouTube Premium" src="https://images.unsplash.com/photo-1587825140400-5fc3b9d90054?q=80&w=1200&auto=format&fit=crop"/>
+          <div class="img-wrap"><img alt="YouTube Premium" src="https://images.unsplash.com/photo-1587825140400-5fc3b9d90054?q=80&w=1200&auto=format&fit=crop"/></div>
           <div class="p-6">
-            <p class="text-sm text-slate-600">YouTube + Music. Consulta disponibilidad.</p>
+            <p class="text-sm text-white/80">YouTube + Music. Consulta disponibilidad.</p>
             <div class="mt-3 flex flex-wrap gap-2">
               <span class="chip bg-yellow-100 text-yellow-700">S/ <span class="p1">3.00</span> · 1 mes</span>
               <span class="chip bg-emerald-100 text-emerald-700">S/ <span class="p3">9.00</span> · 3 meses</span>
@@ -112,11 +111,11 @@
         </article>
 
         <!-- Netflix -->
-        <article class="group rounded-2xl border border-lime-300 bg-white shadow-sm hover:shadow-md transition overflow-hidden">
+        <article class="card">
           <div class="px-6 pt-4 pb-3 bg-gradient-to-r from-red-500 via-rose-500 to-orange-500 text-white font-extrabold text-center">NETFLIX</div>
-          <img class="w-full aspect-[16/9] object-cover" alt="Netflix" src="imagenes/netflixlogo.png" />
+          <div class="img-wrap"><img alt="Netflix" src="imagenes/netflixlogo.png" /></div>
           <div class="p-6">
-            <p class="text-sm text-slate-600">Plan estándar. Consulta requisitos.</p>
+            <p class="text-sm text-white/80">Plan estándar. Consulta requisitos.</p>
             <div class="mt-3 flex flex-wrap gap-2">
               <span class="chip bg-yellow-100 text-yellow-700">S/ <span class="p1">25</span> · 1 mes</span>
               <span class="chip bg-emerald-100 text-emerald-700">S/ <span class="p3">70</span> · 3 meses</span>
@@ -131,9 +130,9 @@
         </article>
 
         <!-- Disney+ -->
-        <article class="group rounded-2xl border border-lime-300 bg-white shadow-sm hover:shadow-md transition overflow-hidden">
+        <article class="card">
           <div class="px-6 pt-4 pb-3 bg-gradient-to-r from-sky-500 via-cyan-500 to-blue-600 text-white font-extrabold text-center">DISNEY+</div>
-          <img class="w-full aspect-[16/9] object-cover" alt="Disney+" src="imagenes/disney+logo.jpg" />
+          <div class="img-wrap"><img alt="Disney+" src="imagenes/disney+logo.jpg" /></div>
           <div class="p-6">
             <div class="mt-3 flex flex-wrap gap-2">
               <span class="chip bg-yellow-100 text-yellow-700">S/ <span class="p1">20</span> · 1 mes</span>
@@ -149,9 +148,9 @@
         </article>
 
         <!-- Prime Video -->
-        <article class="group rounded-2xl border border-lime-300 bg-white shadow-sm hover:shadow-md transition overflow-hidden">
+        <article class="card">
           <div class="px-6 pt-4 pb-3 bg-gradient-to-r from-cyan-600 to-slate-700 text-white font-extrabold text-center">PRIME VIDEO</div>
-          <img class="w-full aspect-[16/9] object-cover" alt="Prime Video" src="imagenes/primevideologo.png" />
+          <div class="img-wrap"><img alt="Prime Video" src="imagenes/primevideologo.png" /></div>
           <div class="p-6">
             <div class="mt-3 flex flex-wrap gap-2">
               <span class="chip bg-yellow-100 text-yellow-700">S/ <span class="p1">18</span> · 1 mes</span>
@@ -167,9 +166,9 @@
         </article>
 
         <!-- Paramount+ -->
-        <article class="group rounded-2xl border border-lime-300 bg-white shadow-sm hover:shadow-md transition overflow-hidden">
+        <article class="card">
           <div class="px-6 pt-4 pb-3 bg-gradient-to-r from-sky-700 to-blue-500 text-white font-extrabold text-center">PARAMOUNT+</div>
-          <img class="w-full aspect-[16/9] object-cover" alt="Paramount+" src="imagenes/paramount+logo.webp" />
+          <div class="img-wrap"><img alt="Paramount+" src="imagenes/paramount+logo.webp" /></div>
           <div class="p-6">
             <div class="mt-3 flex flex-wrap gap-2">
               <span class="chip bg-yellow-100 text-yellow-700">S/ 15 · 1 mes</span>
@@ -185,38 +184,27 @@
         </article>
 
         <!-- DGO -->
-<article class="group rounded-2xl border border-lime-300 bg-white shadow-sm hover:shadow-md transition overflow-hidden">
-  <div class="px-6 pt-4 pb-3 bg-gradient-to-r from-blue-500 via-sky-500 to-indigo-600 text-white font-extrabold text-center">
-    DGO
-  </div>
-
-  <!-- Tu imagen subida a imagenes/ -->
-  <img
-    class="w-full aspect-[16/9] object-cover"
-    alt="DGO"
-    src="imagenes/dgologo.png" />
-
-  <div class="p-6">
-    <!-- Precios visibles -->
-    <div class="mt-3 flex flex-wrap gap-2">
-      <span class="chip bg-yellow-100 text-yellow-700">S/ 19 · 1 mes</span>
-      <span class="chip bg-emerald-100 text-emerald-700">S/ 52 · 3 meses</span>
-      <span class="chip bg-indigo-100 text-indigo-700">S/ 195 · 1 año</span>
-    </div>
-
-    <!-- Botones que envían WhatsApp con servicio+plan+precio -->
-    <div class="mt-4 grid grid-cols-3 gap-2">
-      <a class="btnBuy" data-whats data-servicio="DGO" data-plan="1 mes"  data-precio="19">Comprar</a>
-      <a class="btnBuy" data-whats data-servicio="DGO" data-plan="3 meses" data-precio="52">3M</a>
-      <a class="btnBuy" data-whats data-servicio="DGO" data-plan="1 año"  data-precio="195">1A</a>
-    </div>
-  </div>
-</article>
+        <article class="card">
+          <div class="px-6 pt-4 pb-3 bg-gradient-to-r from-blue-500 via-sky-500 to-indigo-600 text-white font-extrabold text-center">DGO</div>
+          <div class="img-wrap"><img alt="DGO" src="imagenes/dgologo.png" /></div>
+          <div class="p-6">
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="chip bg-yellow-100 text-yellow-700">S/ 19 · 1 mes</span>
+              <span class="chip bg-emerald-100 text-emerald-700">S/ 52 · 3 meses</span>
+              <span class="chip bg-indigo-100 text-indigo-700">S/ 195 · 1 año</span>
+            </div>
+            <div class="mt-4 grid grid-cols-3 gap-2">
+              <a class="btnBuy" data-whats data-servicio="DGO" data-plan="1 mes"  data-precio="19">Comprar</a>
+              <a class="btnBuy" data-whats data-servicio="DGO" data-plan="3 meses" data-precio="52">3M</a>
+              <a class="btnBuy" data-whats data-servicio="DGO" data-plan="1 año"  data-precio="195">1A</a>
+            </div>
+          </div>
+        </article>
 
         <!-- Star+ -->
-        <article class="group rounded-2xl border border-lime-300 bg-white shadow-sm hover:shadow-md transition overflow-hidden">
+        <article class="card">
           <div class="px-6 pt-4 pb-3 bg-gradient-to-r from-purple-600 to-fuchsia-500 text-white font-extrabold text-center">STAR+</div>
-         <img class="w-full aspect-[16/9] object-cover" alt="Star+" src="imagenes/star+logo.webp" />
+          <div class="img-wrap"><img alt="Star+" src="imagenes/star+logo.webp" /></div>
           <div class="p-6">
             <div class="mt-3 flex flex-wrap gap-2">
               <span class="chip bg-yellow-100 text-yellow-700">S/ 20 · 1 mes</span>
@@ -232,9 +220,9 @@
         </article>
 
         <!-- Liga1MAX -->
-        <article class="group rounded-2xl border border-lime-300 bg-white shadow-sm hover:shadow-md transition overflow-hidden">
+        <article class="card">
           <div class="px-6 pt-4 pb-3 bg-gradient-to-r from-amber-500 to-red-500 text-white font-extrabold text-center">LIGA1MAX</div>
-          <img class="w-full aspect-[16/9] object-cover" alt="Liga1MAX" src="imagenes/l1maxlogo.png" />
+          <div class="img-wrap"><img alt="Liga1MAX" src="imagenes/l1maxlogo.png" /></div>
           <div class="p-6">
             <div class="mt-3 flex flex-wrap gap-2">
               <span class="chip bg-yellow-100 text-yellow-700">S/ 29 · 1 mes</span>
@@ -249,10 +237,10 @@
           </div>
         </article>
 
-        <!-- ViX Premium -->
-        <article class="group rounded-2xl border border-lime-300 bg-white shadow-sm hover:shadow-md transition overflow-hidden">
+        <!-- ViX -->
+        <article class="card">
           <div class="px-6 pt-4 pb-3 bg-gradient-to-r from-orange-500 to-rose-500 text-white font-extrabold text-center">VIX PREMIUM</div>
-          <img class="w-full aspect-[16/9] object-cover" alt="ViX Premium" src="imagenes/vixpremiumlogo.jpg" />
+          <div class="img-wrap"><img alt="ViX Premium" src="imagenes/vixpremiumlogo.jpg" /></div>
           <div class="p-6">
             <div class="mt-3 flex flex-wrap gap-2">
               <span class="chip bg-yellow-100 text-yellow-700">S/ 16 · 1 mes</span>
@@ -268,9 +256,9 @@
         </article>
 
         <!-- Crunchyroll -->
-        <article class="group rounded-2xl border border-lime-300 bg-white shadow-sm hover:shadow-md transition overflow-hidden">
+        <article class="card">
           <div class="px-6 pt-4 pb-3 bg-gradient-to-r from-orange-400 to-amber-600 text-white font-extrabold text-center">CRUNCHYROLL</div>
-         <img class="w-full aspect-[16/9] object-cover" alt="Crunchyroll" src="imagenes/crunchyrolllogo.png" />
+          <div class="img-wrap"><img alt="Crunchyroll" src="imagenes/crunchyrolllogo.png" /></div>
           <div class="p-6">
             <div class="mt-3 flex flex-wrap gap-2">
               <span class="chip bg-yellow-100 text-yellow-700">S/ 17 · 1 mes</span>
@@ -285,10 +273,10 @@
           </div>
         </article>
 
-        <!-- Max (HBO Max) -->
-        <article class="group rounded-2xl border border-lime-300 bg-white shadow-sm hover:shadow-md transition overflow-hidden">
+        <!-- Max -->
+        <article class="card">
           <div class="px-6 pt-4 pb-3 bg-gradient-to-r from-blue-700 to-indigo-700 text-white font-extrabold text-center">MAX</div>
-         <img class="w-full aspect-[16/9] object-cover" alt="Max" src="imagenes/hbomaxlogo.png" />
+          <div class="img-wrap"><img alt="Max" src="imagenes/hbomaxlogo.png" /></div>
           <div class="p-6">
             <div class="mt-3 flex flex-wrap gap-2">
               <span class="chip bg-yellow-100 text-yellow-700">S/ 22 · 1 mes</span>
@@ -304,9 +292,9 @@
         </article>
 
         <!-- CapCut Pro -->
-        <article class="group rounded-2xl border border-lime-300 bg-white shadow-sm hover:shadow-md transition overflow-hidden">
+        <article class="card">
           <div class="px-6 pt-4 pb-3 bg-gradient-to-r from-slate-900 to-slate-700 text-white font-extrabold text-center">CAPCUT PRO</div>
-        <img class="w-full aspect-[16/9] object-cover" alt="CapCut Pro" src="imagenes/capcutprologo.png" />
+          <div class="img-wrap"><img alt="CapCut Pro" src="imagenes/capcutprologo.png" /></div>
           <div class="p-6">
             <div class="mt-3 flex flex-wrap gap-2">
               <span class="chip bg-yellow-100 text-yellow-700">S/ 15 · 1 mes</span>
@@ -321,10 +309,11 @@
           </div>
         </article>
 
-        <!-- Canva Pro -->
-        <article class="group rounded-2xl border border-lime-300 bg-white shadow-sm hover:shadow-md transition overflow-hidden">
+        <!-- Canva Pro (arreglado: faltaba p-6) -->
+        <article class="card">
           <div class="px-6 pt-4 pb-3 bg-gradient-to-r from-teal-500 to-emerald-600 text-white font-extrabold text-center">CANVA PRO</div>
-        <img class="w-full aspect-[16/9] object-cover" alt="Canva Pro" src="imagenes/canvaprologo.png" />
+          <div class="img-wrap"><img alt="Canva Pro" src="imagenes/canvaprologo.png" /></div>
+          <div class="p-6">
             <div class="mt-3 flex flex-wrap gap-2">
               <span class="chip bg-yellow-100 text-yellow-700">S/ 20 · 1 mes</span>
               <span class="chip bg-emerald-100 text-emerald-700">S/ 55 · 3 meses</span>
@@ -339,9 +328,9 @@
         </article>
 
         <!-- Drama Box -->
-        <article class="group rounded-2xl border border-lime-300 bg-white shadow-sm hover:shadow-md transition overflow-hidden">
+        <article class="card">
           <div class="px-6 pt-4 pb-3 bg-gradient-to-r from-pink-500 to-rose-600 text-white font-extrabold text-center">DRAMA BOX</div>
-         <img class="w-full aspect-[16/9] object-cover" alt="Drama Box" src="imagenes/dramaboxlogo.jpeg" />
+          <div class="img-wrap"><img alt="Drama Box" src="imagenes/dramaboxlogo.jpeg" /></div>
           <div class="p-6">
             <div class="mt-3 flex flex-wrap gap-2">
               <span class="chip bg-yellow-100 text-yellow-700">S/ 12 · 1 mes</span>
@@ -357,9 +346,9 @@
         </article>
 
         <!-- Claro Video -->
-        <article class="group rounded-2xl border border-lime-300 bg-white shadow-sm hover:shadow-md transition overflow-hidden">
+        <article class="card">
           <div class="px-6 pt-4 pb-3 bg-gradient-to-r from-rose-600 to-red-600 text-white font-extrabold text-center">CLARO VIDEO</div>
-         <img class="w-full aspect-[16/9] object-cover" alt="Claro Video" src="imagenes/clarovideologo.png" />
+          <div class="img-wrap"><img alt="Claro Video" src="imagenes/clarovideologo.png" /></div>
           <div class="p-6">
             <div class="mt-3 flex flex-wrap gap-2">
               <span class="chip bg-yellow-100 text-yellow-700">S/ 14 · 1 mes</span>
@@ -375,9 +364,9 @@
         </article>
 
         <!-- Movistar Play -->
-        <article class="group rounded-2xl border border-lime-300 bg-white shadow-sm hover:shadow-md transition overflow-hidden">
+        <article class="card">
           <div class="px-6 pt-4 pb-3 bg-gradient-to-r from-sky-700 to-cyan-600 text-white font-extrabold text-center">MOVISTAR PLAY</div>
-          <img class="w-full aspect-[16/9] object-cover" alt="Movistar Play" src="imagenes/movistarplaylogo.png" />
+          <div class="img-wrap"><img alt="Movistar Play" src="imagenes/movistarplaylogo.png" /></div>
           <div class="p-6">
             <div class="mt-3 flex flex-wrap gap-2">
               <span class="chip bg-yellow-100 text-yellow-700">S/ 16 · 1 mes</span>
@@ -393,9 +382,9 @@
         </article>
 
         <!-- IPTV -->
-        <article class="group rounded-2xl border border-lime-300 bg-white shadow-sm hover:shadow-md transition overflow-hidden">
+        <article class="card">
           <div class="px-6 pt-4 pb-3 bg-gradient-to-r from-lime-500 to-green-600 text-white font-extrabold text-center">IPTV</div>
-         <img class="w-full aspect-[16/9] object-cover" alt="IPTV" src="imagenes/iptvlogo.jpg" />
+          <div class="img-wrap"><img alt="IPTV" src="imagenes/iptvlogo.jpg" /></div>
           <div class="p-6">
             <div class="mt-3 flex flex-wrap gap-2">
               <span class="chip bg-yellow-100 text-yellow-700">S/ 30 · 1 mes</span>
@@ -411,9 +400,9 @@
         </article>
 
         <!-- ChatGPT Plus -->
-        <article class="group rounded-2xl border border-lime-300 bg-white shadow-sm hover:shadow-md transition overflow-hidden">
+        <article class="card">
           <div class="px-6 pt-4 pb-3 bg-gradient-to-r from-slate-800 to-slate-600 text-white font-extrabold text-center">CHATGPT PLUS</div>
-         <img class="w-full aspect-[16/9] object-cover" alt="ChatGPT Plus" src="imagenes/chatgptpluslogo.png" />
+          <div class="img-wrap"><img alt="ChatGPT Plus" src="imagenes/chatgptpluslogo.png" /></div>
           <div class="p-6">
             <div class="mt-3 flex flex-wrap gap-2">
               <span class="chip bg-yellow-100 text-yellow-700">S/ 45 · 1 mes</span>
@@ -428,10 +417,10 @@
           </div>
         </article>
 
-        <!-- Spotify Premium -->
-        <article class="group rounded-2xl border border-lime-300 bg-white shadow-sm hover:shadow-md transition overflow-hidden">
+        <!-- Spotify -->
+        <article class="card">
           <div class="px-6 pt-4 pb-3 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-extrabold text-center">SPOTIFY PREMIUM</div>
-         <img class="w-full aspect-[16/9] object-cover" alt="Spotify Premium" src="imagenes/spotifypremium.jpeg" />
+          <div class="img-wrap"><img alt="Spotify Premium" src="imagenes/spotifypremium.jpeg" /></div>
           <div class="p-6">
             <div class="mt-3 flex flex-wrap gap-2">
               <span class="chip bg-yellow-100 text-yellow-700">S/ 18 · 1 mes</span>
@@ -447,7 +436,7 @@
         </article>
 
       </div>
-      <p class="mt-6 text-xs text-slate-500 text-center">Nota: Brindamos <strong>asesoría</strong> para que contrates de forma <strong>legítima</strong> y directa con cada proveedor, cumpliendo términos y leyes. No se venden cuentas no autorizadas.</p>
+      <p class="mt-6 text-xs text-white/70 text-center">Nota: Brindamos <strong>asesoría</strong> para que contrates de forma <strong>legítima</strong> y directa con cada proveedor. No se venden cuentas no autorizadas.</p>
     </div>
   </section>
 
@@ -524,7 +513,6 @@
 
   <!-- JS -->
   <script>
-    // CONFIGURA TU NÚMERO Y MENSAJE BASE AQUÍ
     const PHONE = '51929162254'; // SIN +
     const MENSAJE_BASE = 'Hola, vengo de la web de Plataformas Aiden Barreto. Quiero más info.';
 
@@ -533,26 +521,21 @@
       return `https://wa.me/${PHONE}?text=${t}`;
     }
 
-    // Año dinámico
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Menú móvil
     const menuBtn = document.getElementById('menuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     menuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
 
-    // Botones WhatsApp generales
     const txtHeader = `${MENSAJE_BASE}`;
     document.getElementById('btnWhatsHeader').href = linkWhats(txtHeader);
     document.getElementById('btnWhatsMobile').href = linkWhats(txtHeader);
     document.getElementById('btnWhatsHero').href = linkWhats('Hola, quiero consultar sobre el catálogo (1 mes / 3 meses / 1 año).');
 
-    // Estilo uniforme para botones de compra agregados dinámicamente
     document.querySelectorAll('.btnBuy').forEach(b => {
       b.classList.add('w-full','text-center','px-3','py-2','rounded-xl','bg-violet-600','text-white','hover:bg-violet-700');
     });
 
-    // Botones WhatsApp por producto/plan
     document.querySelectorAll('[data-whats]').forEach(btn => {
       btn.addEventListener('click', (e) => {
         e.preventDefault();
@@ -564,10 +547,9 @@
       });
     });
 
-    // Validación simple del formulario (sin regex para compatibilidad)
+    // Form
     const form = document.getElementById('formContacto');
     const estado = document.getElementById('estado');
-
     function validarCampo(el, tipo) {
       const error = document.querySelector(`[data-error="${el.id}"]`);
       let ok = true;
@@ -578,7 +560,6 @@
       el.classList.toggle('ring-rose-400', !ok);
       return ok;
     }
-
     form?.addEventListener('submit', async (e) => {
       e.preventDefault();
       const nombre = document.getElementById('nombre');
@@ -596,10 +577,10 @@
       if (!ok) { estado.textContent = 'Revisa los campos marcados.'; estado.className = 'text-sm text-rose-600'; return; }
 
       estado.textContent = 'Enviando…';
-      estado.className = 'text-sm text-slate-600';
+      estado.className = 'text-sm text-slate-200';
       await new Promise(r => setTimeout(r, 600));
       estado.textContent = '¡Mensaje enviado! Te responderemos pronto.';
-      estado.className = 'text-sm text-emerald-600';
+      estado.className = 'text-sm text-emerald-400';
       form.reset();
     });
   </script>
