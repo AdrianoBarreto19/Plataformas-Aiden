@@ -37,33 +37,62 @@
     }
     .logo-img{ max-width: 92%; max-height: 92%; object-fit: contain; display:block; }
 
-    /* Chips y botones */
-.chip{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center; /* <-- nuevo */
-  gap:4px;
-  padding:.32rem .5rem;
-  border-radius:9999px;
-  font-weight:600;
-  font-size:11px;
-  width:100%;             /* <-- nuevo: para que llene su columna */
-  white-space:nowrap;     /* evita que el texto del chip se parta */
-}
+    /* Chips de precio */
+    .chip{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:4px;
+      padding:.32rem .5rem;
+      border-radius:9999px;
+      font-weight:600;
+      font-size:11px;
+      width:100%;
+      white-space:nowrap;
+    }
 
-    /* Centrar precios */
-   .prices{
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0,1fr));
-  gap: .5rem;
-    align-items:center;
-  }
+    /* Grid de precios (3 columnas) */
+    .prices{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:.5rem;
+      align-items:center;
+    }
 
-  /* --- Para pantallas muy chicas --- */
-  @media (max-width: 400px){
-    .chip{ font-size:10px; padding:.28rem .45rem; }
-  }
-</style>
+    /* Fila de botones (1 mes / 3 meses / 6 meses) centrados */
+    .btn-row{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:.5rem;
+      place-items:center;
+    }
+
+    /* Botón comprar */
+    .btn-buy{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:100%;
+      text-align:center;
+      padding:.55rem .75rem;
+      border-radius:12px;
+      color:#fff;
+      font-weight:700;
+      background:rgba(124,58,237,.12);
+      border:1px solid rgba(124,58,237,.55);
+      box-shadow: 0 1px 0 rgba(255,255,255,.06) inset;
+      transition: all .15s ease;
+    }
+    .btn-buy:hover{
+      background:rgba(124,58,237,.2);
+      border-color:rgba(124,58,237,.85);
+    }
+
+    /* --- Pantallas muy chicas --- */
+    @media (max-width: 400px){
+      .chip{ font-size:10px; padding:.28rem .45rem; }
+    }
+  </style>
 
   <!-- Schema.org (básico) -->
   <script type="application/ld+json">
@@ -139,7 +168,7 @@
         <span class="chip bg-emerald-100/90 text-emerald-800">S/ 35.99 · 3 meses</span>
         <span class="chip bg-indigo-100/90 text-indigo-800">S/ 68.99 · 6 meses</span>
       </div>
-      <div class="mt-4 grid grid-cols-3 gap-2">
+      <div class="mt-4 btn-row">
         <a class="btn-buy" data-whats data-servicio="YouTube Premium" data-plan="1 mes"  data-precio="12.99">1 mes</a>
         <a class="btn-buy" data-whats data-servicio="YouTube Premium" data-plan="3 meses" data-precio="34.99">3 meses</a>
         <a class="btn-buy" data-whats data-servicio="YouTube Premium" data-plan="6 meses" data-precio="64.99">6 meses</a>
@@ -157,7 +186,7 @@
         <span class="chip bg-emerald-100/90 text-emerald-800">S/ 38.99 · 3 meses</span>
         <span class="chip bg-indigo-100/90 text-indigo-800">S/ 72.99 · 6 meses</span>
       </div>
-      <div class="mt-4 grid grid-cols-3 gap-2">
+      <div class="mt-4 btn-row">
         <a class="btn-buy" data-whats data-servicio="Netflix" data-plan="1 mes"  data-precio="13.99">1 mes</a>
         <a class="btn-buy" data-whats data-servicio="Netflix" data-plan="3 meses" data-precio="38.99">3 meses</a>
         <a class="btn-buy" data-whats data-servicio="Netflix" data-plan="6 meses" data-precio="72.99">6 meses</a>
@@ -175,7 +204,7 @@
         <span class="chip bg-emerald-100/90 text-emerald-800">S/ 38.99 · 3 meses</span>
         <span class="chip bg-indigo-100/90 text-indigo-800">S/ 72.99 · 6 meses</span>
       </div>
-      <div class="mt-4 grid grid-cols-3 gap-2">
+      <div class="mt-4 btn-row">
         <a class="btn-buy" data-whats data-servicio="Disney+" data-plan="1 mes"  data-precio="12.99">1 mes</a>
         <a class="btn-buy" data-whats data-servicio="Disney+" data-plan="3 meses" data-precio="38.99">3 meses</a>
         <a class="btn-buy" data-whats data-servicio="Disney+" data-plan="6 meses" data-precio="72.99">6 meses</a>
@@ -193,7 +222,7 @@
         <span class="chip bg-emerald-100/90 text-emerald-800">S/ 21.99 · 3 meses</span>
         <span class="chip bg-indigo-100/90 text-indigo-800">S/ 40.99 · 6 meses</span>
       </div>
-      <div class="mt-4 grid grid-cols-3 gap-2">
+      <div class="mt-4 btn-row">
         <a class="btn-buy" data-whats data-servicio="Prime Video" data-plan="1 mes"  data-precio="7.99">1 mes</a>
         <a class="btn-buy" data-whats data-servicio="Prime Video" data-plan="3 meses" data-precio="21.99">3 meses</a>
         <a class="btn-buy" data-whats data-servicio="Prime Video" data-plan="6 meses" data-precio="40.99">6 meses</a>
@@ -211,7 +240,7 @@
         <span class="chip bg-emerald-100/90 text-emerald-800">S/ 16.99 · 3 meses</span>
         <span class="chip bg-indigo-100/90 text-indigo-800">S/ 31.99 · 6 meses</span>
       </div>
-      <div class="mt-4 grid grid-cols-3 gap-2">
+      <div class="mt-4 btn-row">
         <a class="btn-buy" data-whats data-servicio="Paramount+" data-plan="1 mes"  data-precio="5.99">1 mes</a>
         <a class="btn-buy" data-whats data-servicio="Paramount+" data-plan="3 meses" data-precio="16.99">3 meses</a>
         <a class="btn-buy" data-whats data-servicio="Paramount+" data-plan="6 meses" data-precio="31.99">6 meses</a>
@@ -229,7 +258,7 @@
         <span class="chip bg-emerald-100/90 text-emerald-800">S/ 44.99 · 3 meses</span>
         <span class="chip bg-indigo-100/90 text-indigo-800">S/ 84.99 · 6 meses</span>
       </div>
-      <div class="mt-4 grid grid-cols-3 gap-2">
+      <div class="mt-4 btn-row">
         <a class="btn-buy" data-whats data-servicio="Liga1MAX" data-plan="1 mes"  data-precio="16.99">1 mes</a>
         <a class="btn-buy" data-whats data-servicio="Liga1MAX" data-plan="3 meses" data-precio="44.99">3 meses</a>
         <a class="btn-buy" data-whats data-servicio="Liga1MAX" data-plan="6 meses" data-precio="84.99">6 meses</a>
@@ -247,7 +276,7 @@
         <span class="chip bg-emerald-100/90 text-emerald-800">S/ 36.90 · 3 meses</span>
         <span class="chip bg-indigo-100/90 text-indigo-800">S/ 66.90 · 6 meses</span>
       </div>
-      <div class="mt-4 grid grid-cols-3 gap-2">
+      <div class="mt-4 btn-row">
         <a class="btn-buy" data-whats data-servicio="CapCut Pro" data-plan="1 mes"  data-precio="12.90">1 mes</a>
         <a class="btn-buy" data-whats data-servicio="CapCut Pro" data-plan="3 meses" data-precio="36.90">3 meses</a>
         <a class="btn-buy" data-whats data-servicio="CapCut Pro" data-plan="6 meses" data-precio="66.90">6 meses</a>
@@ -265,7 +294,7 @@
         <span class="chip bg-emerald-100/90 text-emerald-800">S/ 22.99 · 3 meses</span>
         <span class="chip bg-indigo-100/90 text-indigo-800">S/ 42.99 · 6 meses</span>
       </div>
-      <div class="mt-4 grid grid-cols-3 gap-2">
+      <div class="mt-4 btn-row">
         <a class="btn-buy" data-whats data-servicio="Canva Pro" data-plan="1 mes" data-precio="7.99">1 mes</a>
         <a class="btn-buy" data-whats data-servicio="Canva Pro" data-plan="3 meses" data-precio="22.99">3 meses</a>
         <a class="btn-buy" data-whats data-servicio="Canva Pro" data-plan="6 meses" data-precio="42.99">6 meses</a>
@@ -273,7 +302,7 @@
     </div>
   </article>
 
-  <!-- DRAMA BOX (corregido: ahora es una tarjeta completa) -->
+  <!-- DRAMA BOX -->
   <article class="card">
     <div class="card-head bg-gradient-to-r from-amber-200 to-indigo-200 text-slate-900">DRAMA BOX</div>
     <div class="img-wrap"><img class="logo-img" alt="Drama Box" src="imagenes/dramaboxlogo.jpeg" /></div>
@@ -283,7 +312,7 @@
         <span class="chip bg-emerald-100/90 text-emerald-800">S/ 75.99 · 3 meses</span>
         <span class="chip bg-indigo-100/90 text-indigo-800">S/ 144.99 · 6 meses</span>
       </div>
-      <div class="mt-4 grid grid-cols-3 gap-2">
+      <div class="mt-4 btn-row">
         <a class="btn-buy" data-whats data-servicio="Drama Box" data-plan="1 mes"  data-precio="26.99">1 mes</a>
         <a class="btn-buy" data-whats data-servicio="Drama Box" data-plan="3 meses" data-precio="75.99">3 meses</a>
         <a class="btn-buy" data-whats data-servicio="Drama Box" data-plan="6 meses" data-precio="144.99">6 meses</a>
@@ -301,7 +330,7 @@
         <span class="chip bg-emerald-100/90 text-emerald-800">S/ 56.99 · 3 meses</span>
         <span class="chip bg-indigo-100/90 text-indigo-800">S/ 111.99 · 6 meses</span>
       </div>
-      <div class="mt-4 grid grid-cols-3 gap-2">
+      <div class="mt-4 btn-row">
         <a class="btn-buy" data-whats data-servicio="Claro Video" data-plan="1 mes" data-precio="19.99">1 mes</a>
         <a class="btn-buy" data-whats data-servicio="Claro Video" data-plan="3 meses" data-precio="56.99">3 meses</a>
         <a class="btn-buy" data-whats data-servicio="Claro Video" data-plan="6 meses" data-precio="111.99">6 meses</a>
@@ -319,7 +348,7 @@
         <span class="chip bg-emerald-100/90 text-emerald-800">S/ 159.99 · 3 meses</span>
         <span class="chip bg-indigo-100/90 text-indigo-800">S/ 299.99 · 6 meses</span>
       </div>
-      <div class="mt-4 grid grid-cols-3 gap-2">
+      <div class="mt-4 btn-row">
         <a class="btn-buy" data-whats data-servicio="Movistar Play" data-plan="1 mes"  data-precio="54.99">1 mes</a>
         <a class="btn-buy" data-whats data-servicio="Movistar Play" data-plan="3 meses" data-precio="159.99">3 meses</a>
         <a class="btn-buy" data-whats data-servicio="Movistar Play" data-plan="6 meses" data-precio="299.99">6 meses</a>
@@ -337,7 +366,7 @@
         <span class="chip bg-emerald-100/90 text-emerald-800">S/ 26.90 · 3 meses</span>
         <span class="chip bg-indigo-100/90 text-indigo-800">S/ 47.90 · 6 meses</span>
       </div>
-      <div class="mt-4 grid grid-cols-3 gap-2">
+      <div class="mt-4 btn-row">
         <a class="btn-buy" data-whats data-servicio="IPTV" data-plan="1 mes"  data-precio="9.90">1 mes</a>
         <a class="btn-buy" data-whats data-servicio="IPTV" data-plan="3 meses" data-precio="26.90">3 meses</a>
         <a class="btn-buy" data-whats data-servicio="IPTV" data-plan="6 meses" data-precio="47.90">6 meses</a>
@@ -355,7 +384,7 @@
         <span class="chip bg-emerald-100/90 text-emerald-800">S/ 64.99 · 3 meses</span>
         <span class="chip bg-indigo-100/90 text-indigo-800">S/ 119.99 · 6 meses</span>
       </div>
-      <div class="mt-4 grid grid-cols-3 gap-2">
+      <div class="mt-4 btn-row">
         <a class="btn-buy" data-whats data-servicio="ChatGPT Plus" data-plan="1 mes"  data-precio="22.99">1 mes</a>
         <a class="btn-buy" data-whats data-servicio="ChatGPT Plus" data-plan="3 meses" data-precio="64.99">3 meses</a>
         <a class="btn-buy" data-whats data-servicio="ChatGPT Plus" data-plan="6 meses" data-precio="119.99">6 meses</a>
@@ -373,7 +402,7 @@
         <span class="chip bg-emerald-100/90 text-emerald-800">S/ 35.99 · 3 meses</span>
         <span class="chip bg-indigo-100/90 text-indigo-800">S/ 68.99 · 6 meses</span>
       </div>
-      <div class="mt-4 grid grid-cols-3 gap-2">
+      <div class="mt-4 btn-row">
         <a class="btn-buy" data-whats data-servicio="Spotify Premium" data-plan="1 mes"  data-precio="12.99">1 mes</a>
         <a class="btn-buy" data-whats data-servicio="Spotify Premium" data-plan="3 meses" data-precio="35.99">3 meses</a>
         <a class="btn-buy" data-whats data-servicio="Spotify Premium" data-plan="6 meses" data-precio="68.99">6 meses</a>
@@ -391,7 +420,7 @@
         <span class="chip bg-emerald-100/90 text-emerald-800">S/ 61.99 · 3 meses</span>
         <span class="chip bg-indigo-100/90 text-indigo-800">S/ 114.99 · 6 meses</span>
       </div>
-      <div class="mt-4 grid grid-cols-3 gap-2">
+      <div class="mt-4 btn-row">
         <a class="btn-buy" data-whats data-servicio="DGO" data-plan="1 mes"  data-precio="21.99">1 mes</a>
         <a class="btn-buy" data-whats data-servicio="DGO" data-plan="3 meses" data-precio="61.99">3 meses</a>
         <a class="btn-buy" data-whats data-servicio="DGO" data-plan="6 meses" data-precio="114.99">6 meses</a>
@@ -409,7 +438,7 @@
         <span class="chip bg-emerald-100/90 text-emerald-800">S/ 16.99 · 3 meses</span>
         <span class="chip bg-indigo-100/90 text-indigo-800">S/ 31.99 · 6 meses</span>
       </div>
-      <div class="mt-4 grid grid-cols-3 gap-2">
+      <div class="mt-4 btn-row">
         <a class="btn-buy" data-whats data-servicio="Crunchyroll" data-plan="1 mes"  data-precio="5.99">1 mes</a>
         <a class="btn-buy" data-whats data-servicio="Crunchyroll" data-plan="3 meses" data-precio="16.99">3 meses</a>
         <a class="btn-buy" data-whats data-servicio="Crunchyroll" data-plan="6 meses" data-precio="31.99">6 meses</a>
@@ -427,7 +456,7 @@
         <span class="chip bg-emerald-100/90 text-emerald-800">S/ 24.90 · 3 meses</span>
         <span class="chip bg-indigo-100/90 text-indigo-800">S/ 46.90 · 6 meses</span>
       </div>
-      <div class="mt-4 grid grid-cols-3 gap-2">
+      <div class="mt-4 btn-row">
         <a class="btn-buy" data-whats data-servicio="Max" data-plan="1 mes"  data-precio="8.90">1 mes</a>
         <a class="btn-buy" data-whats data-servicio="Max" data-plan="3 meses" data-precio="24.90">3 meses</a>
         <a class="btn-buy" data-whats data-servicio="Max" data-plan="6 meses" data-precio="46.90">6 meses</a>
@@ -605,7 +634,7 @@
     const waMsg = 'Hola, vengo de la web. Quiero ayuda para activar mi plan.';
     document.getElementById('waFloat').setAttribute('href', linkWhats(waMsg, 'floating_button'));
 
-    // WhatsApp por producto (toma data-plan => ya sale "6 meses")
+    // WhatsApp por producto
     document.querySelectorAll('[data-whats]').forEach(btn => {
       btn.addEventListener('click', (e) => {
         e.preventDefault();
@@ -620,7 +649,7 @@
     // Lazy loading logos
     document.querySelectorAll('img.logo-img').forEach(img => img.setAttribute('loading','lazy'));
 
-    // Validación mínima
+    // Validación mínima + envío Formspree
     const form = document.getElementById('formContacto');
     const estado = document.getElementById('estado');
     function validarCampo(el, tipo) {
@@ -633,76 +662,47 @@
       el.classList.toggle('ring-rose-400', !ok);
       return ok;
     }
-// Envío con JSON a Formspree y feedback en la página
-form?.addEventListener('submit', async (e) => {
-  e.preventDefault();
 
-  const nombre  = document.getElementById('nombre');
-  const email   = document.getElementById('email');
-  const mensaje = document.getElementById('mensaje');
-  const legal   = document.getElementById('legal');
+    form?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const nombre  = document.getElementById('nombre');
+      const email   = document.getElementById('email');
+      const mensaje = document.getElementById('mensaje');
+      const legal   = document.getElementById('legal');
 
-  // Validación visual (ya tienes validarCampo definido arriba)
-  const ok = [
-    validarCampo(nombre),
-    validarCampo(email, 'email'),
-    validarCampo(mensaje),
-    legal.checked
-  ].every(Boolean);
+      const ok = [validarCampo(nombre), validarCampo(email,'email'), validarCampo(mensaje), legal.checked].every(Boolean);
+      if (!ok) { estado.textContent = 'Revisa los campos marcados.'; estado.className = 'text-sm text-rose-400'; return; }
 
-  if (!ok) {
-    estado.textContent = 'Revisa los campos marcados.';
-    estado.className = 'text-sm text-rose-400';
-    return;
-  }
+      const submitBtn = form.querySelector('button[type="submit"]');
+      submitBtn?.setAttribute('disabled','true');
+      submitBtn?.classList.add('opacity-60','cursor-not-allowed');
 
-  // Deshabilitar el botón de enviar mientras se envía
-  const submitBtn = form.querySelector('button[type="submit"]');
-  submitBtn?.setAttribute('disabled', 'true');
-  submitBtn?.classList.add('opacity-60', 'cursor-not-allowed');
+      estado.textContent = 'Enviando…';
+      estado.className = 'text-sm text-slate-300';
 
-  estado.textContent = 'Enviando…';
-  estado.className = 'text-sm text-slate-300';
-
-  try {
-    const res = await fetch(form.action, {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        nombre: nombre.value,
-        email: email.value,
-        mensaje: mensaje.value,
-        // Extra útil para tu registro:
-        origen: window.location.href,
-      })
+      try{
+        const res = await fetch(form.action, {
+          method:'POST',
+          headers:{ 'Accept':'application/json', 'Content-Type':'application/json' },
+          body: JSON.stringify({ nombre:nombre.value, email:email.value, mensaje:mensaje.value, origen:window.location.href })
+        });
+        if(res.ok){
+          estado.textContent = '¡Mensaje enviado! Te responderé a la brevedad.';
+          estado.className = 'text-sm text-emerald-400';
+          form.reset();
+        }else{
+          let info=''; try{ info=(await res.json())?.errors?.[0]?.message || '';}catch{}
+          estado.textContent = info || 'Hubo un error al enviar. Intenta de nuevo.';
+          estado.className = 'text-sm text-rose-400';
+        }
+      }catch{
+        estado.textContent = 'No se pudo conectar. Verifica tu red e intenta otra vez.';
+        estado.className = 'text-sm text-rose-400';
+      }finally{
+        submitBtn?.removeAttribute('disabled');
+        submitBtn?.classList.remove('opacity-60','cursor-not-allowed');
+      }
     });
-
-    if (res.ok) {
-      estado.textContent = '¡Mensaje enviado! Te responderé a la brevedad.';
-      estado.className = 'text-sm text-emerald-400';
-      form.reset();
-    } else {
-      // Intentar leer detalles de error de Formspree
-      let info = '';
-      try { info = (await res.json())?.errors?.[0]?.message || ''; } catch {}
-      estado.textContent = info || 'Hubo un error al enviar. Intenta de nuevo.';
-      estado.className = 'text-sm text-rose-400';
-    }
-  } catch (err) {
-    estado.textContent = 'No se pudo conectar. Verifica tu red e intenta otra vez.';
-    estado.className = 'text-sm text-rose-400';
-  } finally {
-    submitBtn?.removeAttribute('disabled');
-    submitBtn?.classList.remove('opacity-60', 'cursor-not-allowed');
-  }
-});
   </script>
 </body>
 </html>
-
-
-
-
