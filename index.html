@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Streaming Aiden Barreto — Suscripciones y Soporte</title>
-  <meta name="description" content="Catálogo de Streaming Aiden Barreto: planes oficiales, activación rápida y soporte. Seguro, sin bajas." />
+  <title>AidenPlay — Suscripciones y Soporte</title>
+  <meta name="description" content="Catálogo de Streaming: planes oficiales, activación rápida y soporte. Seguro, sin bajas." />
   <meta name="theme-color" content="#5b21b6" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,20 +38,39 @@
     .logo-img{ max-width: 92%; max-height: 92%; object-fit: contain; display:block; }
 
     /* Chips y botones */
-    .chip{ display:inline-flex; align-items:center; gap:4px; padding:.2rem .45rem; border-radius:9999px; font-weight:600; font-size:11px; }
-    .btn-buy{ width:100%; text-align:center; padding:.55rem .75rem; border-radius:12px; background:#7c3aed; color:#fff; font-weight:600; }
-    .btn-buy:hover{ background:#6d28d9; }
+.chip{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center; /* <-- nuevo */
+  gap:4px;
+  padding:.32rem .5rem;
+  border-radius:9999px;
+  font-weight:600;
+  font-size:11px;
+  width:100%;             /* <-- nuevo: para que llene su columna */
+  white-space:nowrap;     /* evita que el texto del chip se parta */
+}
 
     /* Centrar precios */
-    .prices{ display:flex; flex-wrap:wrap; gap:.5rem; justify-content:center; }
-  </style>
+   .prices{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: .5rem;
+    align-items:center;
+  }
+
+  /* --- Para pantallas muy chicas --- */
+  @media (max-width: 400px){
+    .chip{ font-size:10px; padding:.28rem .45rem; }
+  }
+</style>
 
   <!-- Schema.org (básico) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"Organization",
-    "name":"Streaming Aiden Barreto",
+    "name":"Streaming AidenPlay",
     "contactPoint":[{"@type":"ContactPoint","telephone":"+51929162254","contactType":"customer service","areaServed":"PE"}]
   }
   </script>
@@ -63,7 +82,7 @@
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       <a href="#" class="flex items-center gap-3 font-extrabold text-lg tracking-tight">
         <span class="inline-block w-8 h-8 rounded-2xl bg-sky-500 shadow"></span>
-        <span>Streaming Aiden Barreto</span>
+        <span>Streaming AidenPlay</span>
       </a>
       <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
         <a class="hover:text-violet-300" href="#catalogo">Catálogo</a>
@@ -110,356 +129,313 @@
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="gridProductos">
 
-        <!-- YOUTUBE PREMIUM -->
-        <article class="card">
-          <div class="card-head bg-gradient-to-r from-rose-500 via-fuchsia-500 to-indigo-600">YOUTUBE PREMIUM</div>
-          <div class="img-wrap"><img class="logo-img" alt="YouTube Premium" src="imagenes/youtubepremiumlogo.webp" /></div>
-          <div class="p-6">
-            <div class="prices mt-3">
-<div class="prices mt-3">
-  <span class="chip bg-yellow-100/90 text-yellow-800">S/ 12.99 · 1 mes</span>
-  <span class="chip bg-emerald-100/90 text-emerald-800">S/ 35.99 · 3 meses</span>
-  <span class="chip bg-indigo-100/90 text-indigo-800">S/ 68.99 · 6 meses</span>
-</div>
-            </div>
-            <div class="mt-4 grid grid-cols-3 gap-2">
-<div class="mt-4 grid grid-cols-3 gap-2">
-  <a class="btn-buy" data-whats data-servicio="YouTube Premium" data-plan="1 mes"  data-precio="12.99">1 mes</a>
-  <a class="btn-buy" data-whats data-servicio="YouTube Premium" data-plan="3 meses" data-precio="34.99">3 meses</a>
-  <a class="btn-buy" data-whats data-servicio="YouTube Premium" data-plan="6 meses" data-precio="64.99">6 meses</a>
-</div>
-            </div>
-          </div>
-        </article>
-
-        <!-- NETFLIX -->
-        <article class="card">
-          <div class="card-head bg-gradient-to-r from-red-600 to-orange-500">NETFLIX</div>
-          <div class="img-wrap"><img class="logo-img" alt="Netflix" src="imagenes/netflixlogo.png" /></div>
-          <div class="p-6">
-            <div class="prices mt-3">
-              <div class="prices mt-3">
-  <span class="chip bg-yellow-100/90 text-yellow-800">S/ 13.99 · 1 mes</span>
-  <span class="chip bg-emerald-100/90 text-emerald-800">S/ 38.99 · 3 meses</span>
-  <span class="chip bg-indigo-100/90 text-indigo-800">S/ 72.99 · 6 meses</span>
-</div>
-            </div>
-            <div class="mt-4 grid grid-cols-3 gap-2">
-<div class="mt-4 grid grid-cols-3 gap-2">
-  <a class="btn-buy" data-whats data-servicio="Netflix" data-plan="1 mes"  data-precio="13.99">1 mes</a>
-  <a class="btn-buy" data-whats data-servicio="Netflix" data-plan="3 meses" data-precio="38.99">3 meses</a>
-  <a class="btn-buy" data-whats data-servicio="Netflix" data-plan="6 meses" data-precio="72.99">6 meses</a>
-</div>
-            </div>
-          </div>
-        </article>
-
-        <!-- DISNEY+ -->
-        <article class="card">
-          <div class="card-head bg-gradient-to-r from-sky-500 to-blue-600">DISNEY+</div>
-          <div class="img-wrap"><img class="logo-img" alt="Disney+" src="imagenes/disney+logo.jpg" /></div>
-          <div class="p-6">
-            <div class="prices mt-3">
-<div class="prices mt-3">
-  <span class="chip bg-yellow-100/90 text-yellow-800">S/ 12.99 · 1 mes</span>
-  <span class="chip bg-emerald-100/90 text-emerald-800">S/ 38.99 · 3 meses</span>
-  <span class="chip bg-indigo-100/90 text-indigo-800">S/ 72.99 · 6 meses</span>
-</div>
-            </div>
-            <div class="mt-4 grid grid-cols-3 gap-2">
-<div class="mt-4 grid grid-cols-3 gap-2">
-  <a class="btn-buy" data-whats data-servicio="Disney+" data-plan="1 mes"  data-precio="12.99">1 mes</a>
-  <a class="btn-buy" data-whats data-servicio="Disney+" data-plan="3 meses" data-precio="38.99">3 meses</a>
-  <a class="btn-buy" data-whats data-servicio="Disney+" data-plan="6 meses" data-precio="72.99">6 meses</a>
-</div>
-            </div>
-          </div>
-        </article>
-
-        <!-- PRIME VIDEO -->
-        <article class="card">
-          <div class="card-head bg-gradient-to-r from-cyan-600 to-slate-700">PRIME VIDEO</div>
-          <div class="img-wrap"><img class="logo-img" alt="Prime Video" src="imagenes/primevideologo.png" /></div>
-          <div class="p-6">
-            <div class="prices mt-3">
-<div class="prices mt-3">
-  <span class="chip bg-yellow-100/90 text-yellow-800">S/ 7.99 · 1 mes</span>
-  <span class="chip bg-emerald-100/90 text-emerald-800">S/ 21.99 · 3 meses</span>
-  <span class="chip bg-indigo-100/90 text-indigo-800">S/ 40.99 · 6 meses</span>
-</div>
-            </div>
-            <div class="mt-4 grid grid-cols-3 gap-2">
-              <div class="mt-4 grid grid-cols-3 gap-2">
-  <a class="btn-buy" data-whats data-servicio="Prime Video" data-plan="1 mes"  data-precio="7.99">1 mes</a>
-  <a class="btn-buy" data-whats data-servicio="Prime Video" data-plan="3 meses" data-precio="21.99">3 meses</a>
-  <a class="btn-buy" data-whats data-servicio="Prime Video" data-plan="6 meses" data-precio="40.99">6 meses</a>
-</div>
-            </div>
-          </div>
-        </article>
-
-       <!-- PARAMOUNT+ -->
-<article class="card">
-  <div class="card-head bg-gradient-to-r from-blue-700 to-sky-600">PARAMOUNT+</div>
-  <div class="img-wrap"><img class="logo-img" alt="Paramount+" src="imagenes/paramount+logo.webp" /></div>
-  <div class="p-6">
-    <div class="prices mt-3">
-      <span class="chip bg-yellow-100/90 text-yellow-800">S/ 5.99 · 1 mes</span>
-      <span class="chip bg-emerald-100/90 text-emerald-800">S/ 16.99 · 3 meses</span>
-      <span class="chip bg-indigo-100/90 text-indigo-800">S/ 31.99 · 6 meses</span>
-    </div>
-    <div class="mt-4 grid grid-cols-3 gap-2">
-      <a class="btn-buy" data-whats data-servicio="Paramount+" data-plan="1 mes"  data-precio="5.99">1 mes</a>
-      <a class="btn-buy" data-whats data-servicio="Paramount+" data-plan="3 meses" data-precio="16.99">3 meses</a>
-      <a class="btn-buy" data-whats data-servicio="Paramount+" data-plan="6 meses" data-precio="31.99">6 meses</a>
-    </div>
-  </div>
-</article>
-
-        <!-- LIGA1MAX -->
-<article class="card">
-  <div class="card-head bg-gradient-to-r from-amber-500 to-red-500">LIGA1MAX</div>
-  <div class="img-wrap"><img class="logo-img" alt="Liga1MAX" src="imagenes/l1maxlogo.png" /></div>
-  <div class="p-6">
-    <div class="prices mt-3">
-      <span class="chip bg-yellow-100/90 text-yellow-800">S/ 16.99 · 1 mes</span>
-      <span class="chip bg-emerald-100/90 text-emerald-800">S/ 44.99 · 3 meses</span>
-      <span class="chip bg-indigo-100/90 text-indigo-800">S/ 84.99 · 6 meses</span>
-    </div>
-    <div class="mt-4 grid grid-cols-3 gap-2">
-      <a class="btn-buy" data-whats data-servicio="Liga1MAX" data-plan="1 mes"  data-precio="16.99">1 mes</a>
-      <a class="btn-buy" data-whats data-servicio="Liga1MAX" data-plan="3 meses" data-precio="44.99">3 meses</a>
-      <a class="btn-buy" data-whats data-servicio="Liga1MAX" data-plan="6 meses" data-precio="84.99">6 meses</a>
-    </div>
-  </div>
-</article>
-
-        <!-- VIX PREMIUM -->
-        <!-- VIX PREMIUM -->
-<article class="card">
-  <div class="card-head bg-gradient-to-r from-orange-500 to-rose-500">VIX PREMIUM</div>
-  <div class="img-wrap"><img class="logo-img" alt="ViX Premium" src="imagenes/vixpremiumlogo.jpg" /></div>
-  <div class="p-6">
-    <div class="prices mt-3">
-      <span class="chip bg-yellow-100/90 text-yellow-800">S/ 14.49 · 1 mes</span>
-      <span class="chip bg-emerald-100/90 text-emerald-800">S/ 37.99 · 3 meses</span>
-      <span class="chip bg-indigo-100/90 text-indigo-800">S/ 71.99 · 6 meses</span>
-    </div>
-    <div class="mt-4 grid grid-cols-3 gap-2">
-      <!-- IMPORTANTE: data-plan debe ser '1 mes', '3 meses', '6 meses' -->
-      <a class="btn-buy" data-whats data-servicio="ViX Premium" data-plan="1 mes"   data-precio="14.49">1 mes</a>
-      <a class="btn-buy" data-whats data-servicio="ViX Premium" data-plan="3 meses" data-precio="37.99">3 meses</a>
-      <a class="btn-buy" data-whats data-servicio="ViX Premium" data-plan="6 meses" data-precio="71.99">6 meses</a>
-    </div>
-  </div>
-</article>
-
-        <!-- CRUNCHYROLL -->
-        <article class="card">
-          <div class="card-head bg-gradient-to-r from-amber-500 to-orange-600">CRUNCHYROLL</div>
-          <div class="img-wrap"><img class="logo-img" alt="Crunchyroll" src="imagenes/crunchyrolllogo.png" /></div>
-          <div class="p-6">
-            <div class="prices mt-3">
-<div class="prices mt-3">
-  <span class="chip bg-yellow-100/90 text-yellow-800">S/ 5.99 · 1 mes</span>
-  <span class="chip bg-emerald-100/90 text-emerald-800">S/ 16.99 · 3 meses</span>
-  <span class="chip bg-indigo-100/90 text-indigo-800">S/ 31.99 · 6 meses</span>
-</div>
-            </div>
-<div class="mt-4 grid grid-cols-3 gap-2">
-  <a class="btn-buy" data-whats data-servicio="Crunchyroll" data-plan="1 mes"  data-precio="5.99">1 mes</a>
-  <a class="btn-buy" data-whats data-servicio="Crunchyroll" data-plan="3 meses" data-precio="16.99">3 meses</a>
-  <a class="btn-buy" data-whats data-servicio="Crunchyroll" data-plan="6 meses" data-precio="31.99">6 meses</a>
-</div>
-          </div>
-        </article>
-
-        <!-- MAX -->
-        <article class="card">
-          <div class="card-head bg-gradient-to-r from-indigo-700 to-blue-700">MAX</div>
-          <div class="img-wrap"><img class="logo-img" alt="Max" src="imagenes/hbomaxlogo.png" /></div>
-          <div class="p-6">
-            <div class="prices mt-3">
-<div class="prices mt-3">
-  <span class="chip bg-yellow-100/90 text-yellow-800">S/ 8.90 · 1 mes</span>
-  <span class="chip bg-emerald-100/90 text-emerald-800">S/ 24.90 · 3 meses</span>
-  <span class="chip bg-indigo-100/90 text-indigo-800">S/ 46.90 · 6 meses</span>
-</div>
-            </div>
-            <div class="mt-4 grid grid-cols-3 gap-2">
-<div class="mt-4 grid grid-cols-3 gap-2">
-  <a class="btn-buy" data-whats data-servicio="Max" data-plan="1 mes"  data-precio="8.90">1 mes</a>
-  <a class="btn-buy" data-whats data-servicio="Max" data-plan="3 meses" data-precio="24.90">3 meses</a>
-  <a class="btn-buy" data-whats data-servicio="Max" data-plan="6 meses" data-precio="46.90">6 meses</a>
-</div>
-            </div>
-          </div>
-        </article>
-
-        <!-- CAPCUT PRO -->
-        <article class="card">
-          <div class="card-head bg-gradient-to-r from-slate-900 to-slate-700">CAPCUT PRO</div>
-          <div class="img-wrap"><img class="logo-img" alt="CapCut Pro" src="imagenes/capcutprologo.png" /></div>
-          <div class="p-6">
-            <div class="prices mt-3">
-<div class="prices mt-3">
-  <span class="chip bg-yellow-100/90 text-yellow-800">S/ 12.90 · 1 mes</span>
-  <span class="chip bg-emerald-100/90 text-emerald-800">S/ 36.90 · 3 meses</span>
-  <span class="chip bg-indigo-100/90 text-indigo-800">S/ 66.90 · 6 meses</span>
-</div>
-            </div>
-            <div class="mt-4 grid grid-cols-3 gap-2">
-<div class="mt-4 grid grid-cols-3 gap-2">
-  <a class="btn-buy" data-whats data-servicio="CapCut Pro" data-plan="1 mes"  data-precio="12.90">1 mes</a>
-  <a class="btn-buy" data-whats data-servicio="CapCut Pro" data-plan="3 meses" data-precio="36.90">3 meses</a>
-  <a class="btn-buy" data-whats data-servicio="CapCut Pro" data-plan="6 meses" data-precio="66.90">6 meses</a>
-</div>
-            </div>
-          </div>
-        </article>
-
-<!-- CANVA PRO -->
-<article class="card">
-  <div class="card-head bg-gradient-to-r from-teal-500 to-emerald-600">CANVA PRO</div>
-  <div class="img-wrap"><img class="logo-img" alt="Canva Pro" src="imagenes/canvaprologo.png" /></div>
-  <div class="p-6">
-    <div class="prices mt-3">
-      <span class="chip bg-yellow-100/90 text-yellow-800">S/ 7.99 · 1 mes</span>
-      <span class="chip bg-emerald-100/90 text-emerald-800">S/ 22.99 · 3 meses</span>
-      <span class="chip bg-indigo-100/90 text-indigo-800">S/ 42.99 · 6 meses</span>
-    </div>
-    <div class="mt-4 grid grid-cols-3 gap-2">
-      <a class="btn-buy" data-whats data-servicio="Canva Pro" data-plan="1 mes" data-precio="7.99">1 mes</a>
-      <a class="btn-buy" data-whats data-servicio="Canva Pro" data-plan="3 meses" data-precio="22.99">3 meses</a>
-      <a class="btn-buy" data-whats data-servicio="Canva Pro" data-plan="6 meses" data-precio="42.99">6 meses</a>
-    </div>
-  </div>
-</article>
-
-        <div class="prices mt-3">
-  <span class="chip bg-yellow-100/90 text-yellow-800">S/ 26.99 · 1 mes</span>
-  <span class="chip bg-emerald-100/90 text-emerald-800">S/ 75.99 · 3 meses</span>
-  <span class="chip bg-indigo-100/90 text-indigo-800">S/ 144.99 · 6 meses</span>
-</div>
-<div class="mt-4 grid grid-cols-3 gap-2">
-  <a class="btn-buy" data-whats data-servicio="Drama Box" data-plan="1 mes"  data-precio="26.99">1 MES</a>
-  <a class="btn-buy" data-whats data-servicio="Drama Box" data-plan="3 meses" data-precio="75.99">3 MESES</a>
-  <a class="btn-buy" data-whats data-servicio="Drama Box" data-plan="6 meses" data-precio="144.99">6 MESES</a>
-</div>
-
-        <!-- CLARO VIDEO -->
-<article class="card">
-  <div class="card-head bg-gradient-to-r from-rose-600 to-red-600">CLARO VIDEO</div>
-  <div class="img-wrap"><img class="logo-img" alt="Claro Video" src="imagenes/clarovideologo.png" /></div>
-  <div class="p-6">
-    <div class="prices mt-3">
-      <span class="chip bg-yellow-100/90 text-yellow-800">S/ 19.99 · 1 mes</span>
-      <span class="chip bg-emerald-100/90 text-emerald-800">S/ 56.99 · 3 meses</span>
-      <span class="chip bg-indigo-100/90 text-indigo-800">S/ 111.99 · 6 meses</span>
-    </div>
-    <div class="mt-4 grid grid-cols-3 gap-2">
-      <a class="btn-buy" data-whats data-servicio="Claro Video" data-plan="1 mes" data-precio="19.99">1 mes</a>
-      <a class="btn-buy" data-whats data-servicio="Claro Video" data-plan="3 meses" data-precio="56.99">3 meses</a>
-      <a class="btn-buy" data-whats data-servicio="Claro Video" data-plan="6 meses" data-precio="111.99">6 meses</a>
-    </div>
-  </div>
-</article>
-
-       <!-- MOVISTAR PLAY -->
-<article class="card">
-  <div class="card-head bg-gradient-to-r from-sky-700 to-cyan-600">MOVISTAR PLAY</div>
-  <div class="img-wrap"><img class="logo-img" alt="Movistar Play" src="imagenes/movistarplaylogo.png" /></div>
-  <div class="p-6">
-    <div class="prices mt-3">
-      <span class="chip bg-yellow-100/90 text-yellow-800">S/ 54.99 · 1 mes</span>
-      <span class="chip bg-emerald-100/90 text-emerald-800">S/ 159.99 · 3 meses</span>
-      <span class="chip bg-indigo-100/90 text-indigo-800">S/ 299.99 · 6 meses</span>
-    </div>
-    <div class="mt-4 grid grid-cols-3 gap-2">
-      <a class="btn-buy" data-whats data-servicio="Movistar Play" data-plan="1 mes"  data-precio="54.99">1 meses</a>
-      <a class="btn-buy" data-whats data-servicio="Movistar Play" data-plan="3 meses" data-precio="159.99">3 meses</a>
-      <a class="btn-buy" data-whats data-servicio="Movistar Play" data-plan="6 meses" data-precio="299.99">6 meses</a>
-    </div>
-  </div>
-</article>
-
-        <!-- IPTV -->
-        <article class="card">
-          <div class="card-head bg-gradient-to-r from-lime-500 to-green-600">IPTV</div>
-          <div class="img-wrap"><img class="logo-img" alt="IPTV" src="imagenes/iptvlogo.jpg" /></div>
-          <div class="p-6">
-              <div class="prices mt-3">
-  <span class="chip bg-yellow-100/90 text-yellow-800">S/ 9.90 · 1 mes</span>
-  <span class="chip bg-emerald-100/90 text-emerald-800">S/ 26.90 · 3 meses</span>
-  <span class="chip bg-indigo-100/90 text-indigo-800">S/ 47.90 · 6 meses</span>
-            </div>
- <div class="mt-4 grid grid-cols-3 gap-2">
-  <a class="btn-buy" data-whats data-servicio="IPTV" data-plan="1 mes"  data-precio="9.90">1 mes</a>
-  <a class="btn-buy" data-whats data-servicio="IPTV" data-plan="3 meses" data-precio="26.90">3 meses</a>
-  <a class="btn-buy" data-whats data-servicio="IPTV" data-plan="6 meses" data-precio="47.90">6 meses</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- CHATGPT PLUS -->
-        <article class="card">
-          <div class="card-head bg-gradient-to-r from-slate-800 to-slate-600">CHATGPT PLUS</div>
-          <div class="img-wrap"><img class="logo-img" alt="ChatGPT Plus" src="imagenes/chatgptpluslogo.png" /></div>
-          <div class="p-6">
-            <div class="prices mt-3">
-<div class="prices mt-3">
-  <span class="chip bg-yellow-100/90 text-yellow-800">S/ 22.99 · 1 mes</span>
-  <span class="chip bg-emerald-100/90 text-emerald-800">S/ 64.99 · 3 meses</span>
-  <span class="chip bg-indigo-100/90 text-indigo-800">S/ 119.99 · 6 meses</span>
-</div>
-            <div class="mt-4 grid grid-cols-3 gap-2">
-<div class="mt-4 grid grid-cols-3 gap-2">
-  <a class="btn-buy" data-whats data-servicio="ChatGPT Plus" data-plan="1 mes"  data-precio="22.99">1 mes</a>
-  <a class="btn-buy" data-whats data-servicio="ChatGPT Plus" data-plan="3 meses" data-precio="64.99">3 meses</a>
-  <a class="btn-buy" data-whats data-servicio="ChatGPT Plus" data-plan="6 meses" data-precio="119.99">6 meses</a>
-</div>
-          </div>
-        </article>
-
-        <!-- SPOTIFY PREMIUM -->
-        <article class="card">
-          <div class="card-head bg-gradient-to-r from-emerald-500 to-teal-600">SPOTIFY PREMIUM</div>
-          <div class="img-wrap"><img class="logo-img" alt="Spotify Premium" src="imagenes/spotifypremium.jpeg" /></div>
-          <div class="p-6">
-            <div class="prices mt-3">
- <div class="prices mt-3">
-  <span class="chip bg-yellow-100/90 text-yellow-800">S/ 12.99 · 1 mes</span>
-  <span class="chip bg-emerald-100/90 text-emerald-800">S/ 35.99 · 3 meses</span>
-  <span class="chip bg-indigo-100/90 text-indigo-800">S/ 68.99 · 6 meses</span>
-</div>
-            <div class="mt-4 grid grid-cols-3 gap-2">
-<div class="mt-4 grid grid-cols-3 gap-2">
-  <a class="btn-buy" data-whats data-servicio="Spotify Premium" data-plan="1 mes"  data-precio="12.99">1 mes</a>
-  <a class="btn-buy" data-whats data-servicio="Spotify Premium" data-plan="3 meses" data-precio="35.99">3 meses</a>
-  <a class="btn-buy" data-whats data-servicio="Spotify Premium" data-plan="6 meses" data-precio="68.99">6 meses</a>
-</div>
-          </div>
-        </article>
-
-<!-- DGO -->
-<article class="card">
-  <div class="card-head bg-gradient-to-r from-sky-500 to-indigo-600">DGO</div>
-  <div class="img-wrap"><img class="logo-img" alt="DGO" src="imagenes/dgologo.png" /></div>
-  <div class="p-6">
-    <div class="prices mt-3">
-      <span class="chip bg-yellow-100/90 text-yellow-800">S/ 21.99 · 1 mes</span>
-      <span class="chip bg-emerald-100/90 text-emerald-800">S/ 61.99 · 3 meses</span>
-      <span class="chip bg-indigo-100/90 text-indigo-800">S/ 114.99 · 6 meses</span>
-    </div>
-    <div class="mt-4 grid grid-cols-3 gap-2">
-      <a class="btn-buy" data-whats data-servicio="DGO" data-plan="1 mes"  data-precio="21.99">1 mes</a>
-      <a class="btn-buy" data-whats data-servicio="DGO" data-plan="3 meses" data-precio="61.99">3 meses</a>
-      <a class="btn-buy" data-whats data-servicio="DGO" data-plan="6 meses" data-precio="114.99">6 meses</a>
-    </div>
-  </div>
-</article>
-
+  <!-- YOUTUBE PREMIUM -->
+  <article class="card">
+    <div class="card-head bg-gradient-to-r from-rose-500 via-fuchsia-500 to-indigo-600">YOUTUBE PREMIUM</div>
+    <div class="img-wrap"><img class="logo-img" alt="YouTube Premium" src="imagenes/youtubepremiumlogo.webp" /></div>
+    <div class="p-6">
+      <div class="prices mt-3">
+        <span class="chip bg-yellow-100/90 text-yellow-800">S/ 12.99 · 1 mes</span>
+        <span class="chip bg-emerald-100/90 text-emerald-800">S/ 35.99 · 3 meses</span>
+        <span class="chip bg-indigo-100/90 text-indigo-800">S/ 68.99 · 6 meses</span>
       </div>
+      <div class="mt-4 grid grid-cols-3 gap-2">
+        <a class="btn-buy" data-whats data-servicio="YouTube Premium" data-plan="1 mes"  data-precio="12.99">1 mes</a>
+        <a class="btn-buy" data-whats data-servicio="YouTube Premium" data-plan="3 meses" data-precio="34.99">3 meses</a>
+        <a class="btn-buy" data-whats data-servicio="YouTube Premium" data-plan="6 meses" data-precio="64.99">6 meses</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- NETFLIX -->
+  <article class="card">
+    <div class="card-head bg-gradient-to-r from-red-600 to-orange-500">NETFLIX</div>
+    <div class="img-wrap"><img class="logo-img" alt="Netflix" src="imagenes/netflixlogo.png" /></div>
+    <div class="p-6">
+      <div class="prices mt-3">
+        <span class="chip bg-yellow-100/90 text-yellow-800">S/ 13.99 · 1 mes</span>
+        <span class="chip bg-emerald-100/90 text-emerald-800">S/ 38.99 · 3 meses</span>
+        <span class="chip bg-indigo-100/90 text-indigo-800">S/ 72.99 · 6 meses</span>
+      </div>
+      <div class="mt-4 grid grid-cols-3 gap-2">
+        <a class="btn-buy" data-whats data-servicio="Netflix" data-plan="1 mes"  data-precio="13.99">1 mes</a>
+        <a class="btn-buy" data-whats data-servicio="Netflix" data-plan="3 meses" data-precio="38.99">3 meses</a>
+        <a class="btn-buy" data-whats data-servicio="Netflix" data-plan="6 meses" data-precio="72.99">6 meses</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- DISNEY+ -->
+  <article class="card">
+    <div class="card-head bg-gradient-to-r from-sky-500 to-blue-600">DISNEY+</div>
+    <div class="img-wrap"><img class="logo-img" alt="Disney+" src="imagenes/disney+logo.jpg" /></div>
+    <div class="p-6">
+      <div class="prices mt-3">
+        <span class="chip bg-yellow-100/90 text-yellow-800">S/ 12.99 · 1 mes</span>
+        <span class="chip bg-emerald-100/90 text-emerald-800">S/ 38.99 · 3 meses</span>
+        <span class="chip bg-indigo-100/90 text-indigo-800">S/ 72.99 · 6 meses</span>
+      </div>
+      <div class="mt-4 grid grid-cols-3 gap-2">
+        <a class="btn-buy" data-whats data-servicio="Disney+" data-plan="1 mes"  data-precio="12.99">1 mes</a>
+        <a class="btn-buy" data-whats data-servicio="Disney+" data-plan="3 meses" data-precio="38.99">3 meses</a>
+        <a class="btn-buy" data-whats data-servicio="Disney+" data-plan="6 meses" data-precio="72.99">6 meses</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- PRIME VIDEO -->
+  <article class="card">
+    <div class="card-head bg-gradient-to-r from-cyan-600 to-slate-700">PRIME VIDEO</div>
+    <div class="img-wrap"><img class="logo-img" alt="Prime Video" src="imagenes/primevideologo.png" /></div>
+    <div class="p-6">
+      <div class="prices mt-3">
+        <span class="chip bg-yellow-100/90 text-yellow-800">S/ 7.99 · 1 mes</span>
+        <span class="chip bg-emerald-100/90 text-emerald-800">S/ 21.99 · 3 meses</span>
+        <span class="chip bg-indigo-100/90 text-indigo-800">S/ 40.99 · 6 meses</span>
+      </div>
+      <div class="mt-4 grid grid-cols-3 gap-2">
+        <a class="btn-buy" data-whats data-servicio="Prime Video" data-plan="1 mes"  data-precio="7.99">1 mes</a>
+        <a class="btn-buy" data-whats data-servicio="Prime Video" data-plan="3 meses" data-precio="21.99">3 meses</a>
+        <a class="btn-buy" data-whats data-servicio="Prime Video" data-plan="6 meses" data-precio="40.99">6 meses</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- PARAMOUNT+ -->
+  <article class="card">
+    <div class="card-head bg-gradient-to-r from-blue-700 to-sky-600">PARAMOUNT+</div>
+    <div class="img-wrap"><img class="logo-img" alt="Paramount+" src="imagenes/paramount+logo.webp" /></div>
+    <div class="p-6">
+      <div class="prices mt-3">
+        <span class="chip bg-yellow-100/90 text-yellow-800">S/ 5.99 · 1 mes</span>
+        <span class="chip bg-emerald-100/90 text-emerald-800">S/ 16.99 · 3 meses</span>
+        <span class="chip bg-indigo-100/90 text-indigo-800">S/ 31.99 · 6 meses</span>
+      </div>
+      <div class="mt-4 grid grid-cols-3 gap-2">
+        <a class="btn-buy" data-whats data-servicio="Paramount+" data-plan="1 mes"  data-precio="5.99">1 mes</a>
+        <a class="btn-buy" data-whats data-servicio="Paramount+" data-plan="3 meses" data-precio="16.99">3 meses</a>
+        <a class="btn-buy" data-whats data-servicio="Paramount+" data-plan="6 meses" data-precio="31.99">6 meses</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- LIGA1MAX -->
+  <article class="card">
+    <div class="card-head bg-gradient-to-r from-amber-500 to-red-500">LIGA1MAX</div>
+    <div class="img-wrap"><img class="logo-img" alt="Liga1MAX" src="imagenes/l1maxlogo.png" /></div>
+    <div class="p-6">
+      <div class="prices mt-3">
+        <span class="chip bg-yellow-100/90 text-yellow-800">S/ 16.99 · 1 mes</span>
+        <span class="chip bg-emerald-100/90 text-emerald-800">S/ 44.99 · 3 meses</span>
+        <span class="chip bg-indigo-100/90 text-indigo-800">S/ 84.99 · 6 meses</span>
+      </div>
+      <div class="mt-4 grid grid-cols-3 gap-2">
+        <a class="btn-buy" data-whats data-servicio="Liga1MAX" data-plan="1 mes"  data-precio="16.99">1 mes</a>
+        <a class="btn-buy" data-whats data-servicio="Liga1MAX" data-plan="3 meses" data-precio="44.99">3 meses</a>
+        <a class="btn-buy" data-whats data-servicio="Liga1MAX" data-plan="6 meses" data-precio="84.99">6 meses</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- CAPCUT PRO -->
+  <article class="card">
+    <div class="card-head bg-gradient-to-r from-slate-900 to-slate-700">CAPCUT PRO</div>
+    <div class="img-wrap"><img class="logo-img" alt="CapCut Pro" src="imagenes/capcutprologo.png" /></div>
+    <div class="p-6">
+      <div class="prices mt-3">
+        <span class="chip bg-yellow-100/90 text-yellow-800">S/ 12.90 · 1 mes</span>
+        <span class="chip bg-emerald-100/90 text-emerald-800">S/ 36.90 · 3 meses</span>
+        <span class="chip bg-indigo-100/90 text-indigo-800">S/ 66.90 · 6 meses</span>
+      </div>
+      <div class="mt-4 grid grid-cols-3 gap-2">
+        <a class="btn-buy" data-whats data-servicio="CapCut Pro" data-plan="1 mes"  data-precio="12.90">1 mes</a>
+        <a class="btn-buy" data-whats data-servicio="CapCut Pro" data-plan="3 meses" data-precio="36.90">3 meses</a>
+        <a class="btn-buy" data-whats data-servicio="CapCut Pro" data-plan="6 meses" data-precio="66.90">6 meses</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- CANVA PRO -->
+  <article class="card">
+    <div class="card-head bg-gradient-to-r from-teal-500 to-emerald-600">CANVA PRO</div>
+    <div class="img-wrap"><img class="logo-img" alt="Canva Pro" src="imagenes/canvaprologo.png" /></div>
+    <div class="p-6">
+      <div class="prices mt-3">
+        <span class="chip bg-yellow-100/90 text-yellow-800">S/ 7.99 · 1 mes</span>
+        <span class="chip bg-emerald-100/90 text-emerald-800">S/ 22.99 · 3 meses</span>
+        <span class="chip bg-indigo-100/90 text-indigo-800">S/ 42.99 · 6 meses</span>
+      </div>
+      <div class="mt-4 grid grid-cols-3 gap-2">
+        <a class="btn-buy" data-whats data-servicio="Canva Pro" data-plan="1 mes" data-precio="7.99">1 mes</a>
+        <a class="btn-buy" data-whats data-servicio="Canva Pro" data-plan="3 meses" data-precio="22.99">3 meses</a>
+        <a class="btn-buy" data-whats data-servicio="Canva Pro" data-plan="6 meses" data-precio="42.99">6 meses</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- DRAMA BOX (corregido: ahora es una tarjeta completa) -->
+  <article class="card">
+    <div class="card-head bg-gradient-to-r from-amber-200 to-indigo-200 text-slate-900">DRAMA BOX</div>
+    <div class="img-wrap"><img class="logo-img" alt="Drama Box" src="imagenes/dramaboxlogo.jpeg" /></div>
+    <div class="p-6">
+      <div class="prices mt-3">
+        <span class="chip bg-yellow-100/90 text-yellow-800">S/ 26.99 · 1 mes</span>
+        <span class="chip bg-emerald-100/90 text-emerald-800">S/ 75.99 · 3 meses</span>
+        <span class="chip bg-indigo-100/90 text-indigo-800">S/ 144.99 · 6 meses</span>
+      </div>
+      <div class="mt-4 grid grid-cols-3 gap-2">
+        <a class="btn-buy" data-whats data-servicio="Drama Box" data-plan="1 mes"  data-precio="26.99">1 mes</a>
+        <a class="btn-buy" data-whats data-servicio="Drama Box" data-plan="3 meses" data-precio="75.99">3 meses</a>
+        <a class="btn-buy" data-whats data-servicio="Drama Box" data-plan="6 meses" data-precio="144.99">6 meses</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- CLARO VIDEO -->
+  <article class="card">
+    <div class="card-head bg-gradient-to-r from-rose-600 to-red-600">CLARO VIDEO</div>
+    <div class="img-wrap"><img class="logo-img" alt="Claro Video" src="imagenes/clarovideologo.png" /></div>
+    <div class="p-6">
+      <div class="prices mt-3">
+        <span class="chip bg-yellow-100/90 text-yellow-800">S/ 19.99 · 1 mes</span>
+        <span class="chip bg-emerald-100/90 text-emerald-800">S/ 56.99 · 3 meses</span>
+        <span class="chip bg-indigo-100/90 text-indigo-800">S/ 111.99 · 6 meses</span>
+      </div>
+      <div class="mt-4 grid grid-cols-3 gap-2">
+        <a class="btn-buy" data-whats data-servicio="Claro Video" data-plan="1 mes" data-precio="19.99">1 mes</a>
+        <a class="btn-buy" data-whats data-servicio="Claro Video" data-plan="3 meses" data-precio="56.99">3 meses</a>
+        <a class="btn-buy" data-whats data-servicio="Claro Video" data-plan="6 meses" data-precio="111.99">6 meses</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- MOVISTAR PLAY -->
+  <article class="card">
+    <div class="card-head bg-gradient-to-r from-sky-700 to-cyan-600">MOVISTAR PLAY</div>
+    <div class="img-wrap"><img class="logo-img" alt="Movistar Play" src="imagenes/movistarplaylogo.png" /></div>
+    <div class="p-6">
+      <div class="prices mt-3">
+        <span class="chip bg-yellow-100/90 text-yellow-800">S/ 54.99 · 1 mes</span>
+        <span class="chip bg-emerald-100/90 text-emerald-800">S/ 159.99 · 3 meses</span>
+        <span class="chip bg-indigo-100/90 text-indigo-800">S/ 299.99 · 6 meses</span>
+      </div>
+      <div class="mt-4 grid grid-cols-3 gap-2">
+        <a class="btn-buy" data-whats data-servicio="Movistar Play" data-plan="1 mes"  data-precio="54.99">1 mes</a>
+        <a class="btn-buy" data-whats data-servicio="Movistar Play" data-plan="3 meses" data-precio="159.99">3 meses</a>
+        <a class="btn-buy" data-whats data-servicio="Movistar Play" data-plan="6 meses" data-precio="299.99">6 meses</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- IPTV -->
+  <article class="card">
+    <div class="card-head bg-gradient-to-r from-lime-500 to-green-600">IPTV</div>
+    <div class="img-wrap"><img class="logo-img" alt="IPTV" src="imagenes/iptvlogo.jpg" /></div>
+    <div class="p-6">
+      <div class="prices mt-3">
+        <span class="chip bg-yellow-100/90 text-yellow-800">S/ 9.90 · 1 mes</span>
+        <span class="chip bg-emerald-100/90 text-emerald-800">S/ 26.90 · 3 meses</span>
+        <span class="chip bg-indigo-100/90 text-indigo-800">S/ 47.90 · 6 meses</span>
+      </div>
+      <div class="mt-4 grid grid-cols-3 gap-2">
+        <a class="btn-buy" data-whats data-servicio="IPTV" data-plan="1 mes"  data-precio="9.90">1 mes</a>
+        <a class="btn-buy" data-whats data-servicio="IPTV" data-plan="3 meses" data-precio="26.90">3 meses</a>
+        <a class="btn-buy" data-whats data-servicio="IPTV" data-plan="6 meses" data-precio="47.90">6 meses</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- CHATGPT PLUS -->
+  <article class="card">
+    <div class="card-head bg-gradient-to-r from-slate-800 to-slate-600">CHATGPT PLUS</div>
+    <div class="img-wrap"><img class="logo-img" alt="ChatGPT Plus" src="imagenes/chatgptpluslogo.png" /></div>
+    <div class="p-6">
+      <div class="prices mt-3">
+        <span class="chip bg-yellow-100/90 text-yellow-800">S/ 22.99 · 1 mes</span>
+        <span class="chip bg-emerald-100/90 text-emerald-800">S/ 64.99 · 3 meses</span>
+        <span class="chip bg-indigo-100/90 text-indigo-800">S/ 119.99 · 6 meses</span>
+      </div>
+      <div class="mt-4 grid grid-cols-3 gap-2">
+        <a class="btn-buy" data-whats data-servicio="ChatGPT Plus" data-plan="1 mes"  data-precio="22.99">1 mes</a>
+        <a class="btn-buy" data-whats data-servicio="ChatGPT Plus" data-plan="3 meses" data-precio="64.99">3 meses</a>
+        <a class="btn-buy" data-whats data-servicio="ChatGPT Plus" data-plan="6 meses" data-precio="119.99">6 meses</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- SPOTIFY PREMIUM -->
+  <article class="card">
+    <div class="card-head bg-gradient-to-r from-emerald-500 to-teal-600">SPOTIFY PREMIUM</div>
+    <div class="img-wrap"><img class="logo-img" alt="Spotify Premium" src="imagenes/spotifypremium.jpeg" /></div>
+    <div class="p-6">
+      <div class="prices mt-3">
+        <span class="chip bg-yellow-100/90 text-yellow-800">S/ 12.99 · 1 mes</span>
+        <span class="chip bg-emerald-100/90 text-emerald-800">S/ 35.99 · 3 meses</span>
+        <span class="chip bg-indigo-100/90 text-indigo-800">S/ 68.99 · 6 meses</span>
+      </div>
+      <div class="mt-4 grid grid-cols-3 gap-2">
+        <a class="btn-buy" data-whats data-servicio="Spotify Premium" data-plan="1 mes"  data-precio="12.99">1 mes</a>
+        <a class="btn-buy" data-whats data-servicio="Spotify Premium" data-plan="3 meses" data-precio="35.99">3 meses</a>
+        <a class="btn-buy" data-whats data-servicio="Spotify Premium" data-plan="6 meses" data-precio="68.99">6 meses</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- DGO -->
+  <article class="card">
+    <div class="card-head bg-gradient-to-r from-sky-500 to-indigo-600">DGO</div>
+    <div class="img-wrap"><img class="logo-img" alt="DGO" src="imagenes/dgologo.png" /></div>
+    <div class="p-6">
+      <div class="prices mt-3">
+        <span class="chip bg-yellow-100/90 text-yellow-800">S/ 21.99 · 1 mes</span>
+        <span class="chip bg-emerald-100/90 text-emerald-800">S/ 61.99 · 3 meses</span>
+        <span class="chip bg-indigo-100/90 text-indigo-800">S/ 114.99 · 6 meses</span>
+      </div>
+      <div class="mt-4 grid grid-cols-3 gap-2">
+        <a class="btn-buy" data-whats data-servicio="DGO" data-plan="1 mes"  data-precio="21.99">1 mes</a>
+        <a class="btn-buy" data-whats data-servicio="DGO" data-plan="3 meses" data-precio="61.99">3 meses</a>
+        <a class="btn-buy" data-whats data-servicio="DGO" data-plan="6 meses" data-precio="114.99">6 meses</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- CRUNCHYROLL -->
+  <article class="card">
+    <div class="card-head bg-gradient-to-r from-amber-500 to-orange-600">CRUNCHYROLL</div>
+    <div class="img-wrap"><img class="logo-img" alt="Crunchyroll" src="imagenes/crunchyrolllogo.png" /></div>
+    <div class="p-6">
+      <div class="prices mt-3">
+        <span class="chip bg-yellow-100/90 text-yellow-800">S/ 5.99 · 1 mes</span>
+        <span class="chip bg-emerald-100/90 text-emerald-800">S/ 16.99 · 3 meses</span>
+        <span class="chip bg-indigo-100/90 text-indigo-800">S/ 31.99 · 6 meses</span>
+      </div>
+      <div class="mt-4 grid grid-cols-3 gap-2">
+        <a class="btn-buy" data-whats data-servicio="Crunchyroll" data-plan="1 mes"  data-precio="5.99">1 mes</a>
+        <a class="btn-buy" data-whats data-servicio="Crunchyroll" data-plan="3 meses" data-precio="16.99">3 meses</a>
+        <a class="btn-buy" data-whats data-servicio="Crunchyroll" data-plan="6 meses" data-precio="31.99">6 meses</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- MAX -->
+  <article class="card">
+    <div class="card-head bg-gradient-to-r from-indigo-700 to-blue-700">MAX</div>
+    <div class="img-wrap"><img class="logo-img" alt="Max" src="imagenes/hbomaxlogo.png" /></div>
+    <div class="p-6">
+      <div class="prices mt-3">
+        <span class="chip bg-yellow-100/90 text-yellow-800">S/ 8.90 · 1 mes</span>
+        <span class="chip bg-emerald-100/90 text-emerald-800">S/ 24.90 · 3 meses</span>
+        <span class="chip bg-indigo-100/90 text-indigo-800">S/ 46.90 · 6 meses</span>
+      </div>
+      <div class="mt-4 grid grid-cols-3 gap-2">
+        <a class="btn-buy" data-whats data-servicio="Max" data-plan="1 mes"  data-precio="8.90">1 mes</a>
+        <a class="btn-buy" data-whats data-servicio="Max" data-plan="3 meses" data-precio="24.90">3 meses</a>
+        <a class="btn-buy" data-whats data-servicio="Max" data-plan="6 meses" data-precio="46.90">6 meses</a>
+      </div>
+    </div>
+  </article>
+
+</div>
 
       <p class="mt-6 text-xs text-slate-300/80 text-center">
         Nota: Brindamos <strong>asesoría</strong> para que contrates de forma legítima y directa con cada proveedor.
@@ -590,7 +566,7 @@
   <!-- Footer -->
   <footer class="border-t border-white/10 py-8">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-slate-300">
-      <p>© <span id="year"></span> Streaming Aiden Barreto. Todos los derechos reservados.</p>
+      <p>© <span id="year"></span> Streaming AidenPlay. Todos los derechos reservados.</p>
       <nav class="flex items-center gap-4">
         <a href="#privacidad" class="hover:text-violet-300">Privacidad</a>
         <a href="#terminos" class="hover:text-violet-300">Términos</a>
@@ -610,7 +586,7 @@
   <!-- JS -->
   <script>
     const PHONE = '51929162254';
-    const MENSAJE_BASE = 'Hola, vengo de la web de Streaming Aiden Barreto. Quiero más info.';
+    const MENSAJE_BASE = 'Hola, vengo de la web de Streaming AidenPlay. Quiero más info sobre los costos y el catalogo.';
     const linkWhats = (t, utmMedium='cta') =>
       `https://wa.me/${PHONE}?text=${encodeURIComponent(t)}&utm_source=site&utm_medium=${encodeURIComponent(utmMedium)}&utm_campaign=whatsapp`;
 
@@ -726,4 +702,3 @@ form?.addEventListener('submit', async (e) => {
   </script>
 </body>
 </html>
-
