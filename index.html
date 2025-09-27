@@ -55,12 +55,12 @@
         <span class="inline-block w-8 h-8 rounded-2xl bg-sky-500 shadow"></span>
         <span>Streaming Aiden Barreto</span>
       </a>
-     <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
-  <a class="hover:text-violet-300" href="#catalogo">Catálogo</a>
-  <a class="hover:text-violet-300" href="#soporte">Soporte</a>
-  <a class="hover:text-violet-300" href="#faq">FAQ</a>
-  <a class="hover:text-violet-300" href="#contacto">Contacto</a>
-</nav>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a class="hover:text-violet-300" href="#catalogo">Catálogo</a>
+        <a class="hover:text-violet-300" href="#soporte">Soporte</a>
+        <a class="hover:text-violet-300" href="#faq">FAQ</a>
+        <a class="hover:text-violet-300" href="#contacto">Contacto</a>
+      </nav>
       <div class="hidden md:flex items-center gap-3">
         <a href="#contacto" class="px-4 py-2 rounded-xl border border-white/20 hover:border-violet-400/60 transition">Más info</a>
         <a id="btnWhatsHeader" target="_blank" rel="noopener" class="px-4 py-2 rounded-xl bg-emerald-600 text-white hover:bg-emerald-700 transition">WhatsApp</a>
@@ -69,19 +69,18 @@
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
       </button>
     </div>
- <div id="mobileMenu" class="md:hidden hidden border-t border-white/10">
-  <div class="px-4 py-3 space-y-2 text-sm font-medium">
-    <a class="block p-2 rounded-lg hover:bg-white/5" href="#catalogo">Catálogo</a>
-    <a class="block p-2 rounded-lg hover:bg-white/5" href="#soporte">Soporte</a>
-    <a class="block p-2 rounded-lg hover:bg-white/5" href="#faq">FAQ</a>
-    <a class="block p-2 rounded-lg hover:bg-white/5" href="#contacto">Contacto</a>
-    <a id="btnWhatsMobile" target="_blank" rel="noopener"
-       class="block p-2 text-center rounded-lg bg-emerald-600 text-white hover:bg-emerald-700">WhatsApp</a>
-  </div>
-</div>
+    <div id="mobileMenu" class="md:hidden hidden border-t border-white/10">
+      <div class="px-4 py-3 space-y-2 text-sm font-medium">
+        <a class="block p-2 rounded-lg hover:bg-white/5" href="#catalogo">Catálogo</a>
+        <a class="block p-2 rounded-lg hover:bg-white/5" href="#soporte">Soporte</a>
+        <a class="block p-2 rounded-lg hover:bg-white/5" href="#faq">FAQ</a>
+        <a class="block p-2 rounded-lg hover:bg-white/5" href="#contacto">Contacto</a>
+        <a id="btnWhatsMobile" target="_blank" rel="noopener" class="block p-2 text-center rounded-lg bg-emerald-600 text-white hover:bg-emerald-700">WhatsApp</a>
+      </div>
+    </div>
   </header>
 
-  <!-- Hero con descripción llamativa -->
+  <!-- Hero -->
   <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
     <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-center">Catálogo de streaming</h1>
     <p class="mt-3 text-center text-slate-300/90 max-w-3xl mx-auto">
@@ -97,7 +96,7 @@
   </section>
 
   <!-- Catálogo -->
- <section id="catalogo" class="pb-14 scroll-mt-24">
+  <section id="catalogo" class="pb-14 scroll-mt-24">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="gridProductos">
 
@@ -455,7 +454,7 @@
     </div>
   </section>
 
-  <!-- Soporte (NUEVO) -->
+  <!-- Soporte -->
   <section id="soporte" class="py-16 lg:py-20 bg-slate-900/40 scroll-mt-24">
     <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
       <h2 class="text-3xl font-extrabold tracking-tight text-center">Soporte</h2>
@@ -477,7 +476,7 @@
     </div>
   </section>
 
-  <!-- Privacidad (NUEVO) -->
+  <!-- Privacidad -->
   <section id="privacidad" class="py-16 lg:py-20 scroll-mt-24">
     <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
       <h2 class="text-3xl font-extrabold tracking-tight text-center">Privacidad</h2>
@@ -494,7 +493,7 @@
     </div>
   </section>
 
-  <!-- Términos (NUEVO) -->
+  <!-- Términos -->
   <section id="terminos" class="py-16 lg:py-20 bg-slate-900/30 scroll-mt-24">
     <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
       <h2 class="text-3xl font-extrabold tracking-tight text-center">Términos</h2>
@@ -545,7 +544,7 @@
   <section id="contacto" class="py-16 scroll-mt-24">
     <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
       <h2 class="text-3xl font-extrabold tracking-tight text-center">Contáctanos</h2>
-      <!-- mailto (simple y sin backend). Para envío directo sin abrir correo, usa Formspree como se explica. -->
+    <!-- Envío directo con Formspree -->
       <form id="formContacto" class="mt-8 space-y-4"
             action="https://formspree.io/f/mzzjdrqd" method="POST" enctype="text/plain" novalidate>
         <div>
@@ -600,7 +599,7 @@
     document.getElementById('btnWhatsHeader').href = linkWhats(txtHeader);
     document.getElementById('btnWhatsMobile').href = linkWhats(txtHeader);
 
-    // WhatsApp por producto
+    // WhatsApp por producto (usa el data-precio del botón que se pulsa)
     document.querySelectorAll('[data-whats]').forEach(btn => {
       btn.addEventListener('click', (e) => {
         e.preventDefault();
@@ -612,7 +611,24 @@
       });
     });
 
-    // Validación mínima (visual)
+    // Sincroniza chips (S/ … · 1 mes / 3 meses / 1 año) con los data-precio de cada botón
+    function syncPrices() {
+      document.querySelectorAll('#gridProductos .card').forEach(card => {
+        const btns = card.querySelectorAll('.btn-buy');
+        const chips = card.querySelectorAll('.prices .chip');
+        if (btns.length >= 3 && chips.length >= 3) {
+          const p1  = btns[0].getAttribute('data-precio') ?? '';
+          const p3  = btns[1].getAttribute('data-precio') ?? '';
+          const p12 = btns[2].getAttribute('data-precio') ?? '';
+          chips[0].textContent = `S/ ${p1} · 1 mes`;
+          chips[1].textContent = `S/ ${p3} · 3 meses`;
+          chips[2].textContent = `S/ ${p12} · 1 año`;
+        }
+      });
+    }
+    syncPrices(); // Ejecuta al cargar
+
+    // Validación mínima (visual) del formulario
     const form = document.getElementById('formContacto');
     const estado = document.getElementById('estado');
     function validarCampo(el, tipo) {
@@ -632,7 +648,7 @@
       const legal = document.getElementById('legal');
       const ok = [validarCampo(nombre), validarCampo(email,'email'), validarCampo(mensaje), legal.checked].every(Boolean);
       if (!ok) { e.preventDefault(); estado.textContent = 'Revisa los campos marcados.'; estado.className = 'text-sm text-rose-400'; }
-      else { estado.textContent = 'Abriendo tu cliente de correo…'; estado.className = 'text-sm text-slate-300'; }
+      else { estado.textContent = 'Enviado. ¡Gracias por escribirnos!'; estado.className = 'text-sm text-emerald-300'; }
     });
   </script>
 </body>
