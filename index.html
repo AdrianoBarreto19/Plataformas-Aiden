@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Plataformas Aiden Barreto — Suscripciones y Soporte</title>
-  <meta name="description" content="Catálogo de Plataformas Aiden Barreto: precios por 1 mes, 3 meses y 1 año. Contacto directo por WhatsApp." />
+  <title>Streaming Aiden Barreto — Suscripciones y Soporte</title>
+  <meta name="description" content="Catálogo de Streaming Aiden Barreto: planes oficiales, activación rápida y soporte. Seguro, sin bajas." />
   <meta name="theme-color" content="#5b21b6" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,7 +15,7 @@
     html { scroll-behavior: smooth; }
     body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial; }
 
-    /* Fondo que dijiste que está bien */
+    /* Fondo */
     .bg-app{
       background:
         radial-gradient(1200px 600px at 10% -10%, rgba(99,102,241,.22), transparent 60%),
@@ -23,30 +23,27 @@
         linear-gradient(180deg, #0b1220 0%, #1b1440 50%, #240e57 100%);
     }
 
-    /* Tarjeta consistente */
+    /* Tarjeta */
     .card{ border-radius: 16px; border:1px solid rgba(255,255,255,.08); background: rgba(2,6,23,.55); box-shadow: 0 10px 30px rgba(0,0,0,.25); overflow:hidden; backdrop-filter: blur(4px); }
     .card-head{ padding: 12px 24px; font-weight: 800; text-align:center; color:#fff; letter-spacing:.3px; font-size: .95rem; border-bottom:1px solid rgba(255,255,255,.06); }
 
-    /* === IGUALADOR DE LOGOS (todas iguales, centradas y sin distorsión) === */
+    /* Logos iguales */
     .img-wrap{
-      height: 220px;        /* alto igual para TODAS */
-      width: 100%;
-      background: #ffffff;  /* fondo blanco para que el logo resalte */
+      height: 220px; width: 100%;
+      background: #ffffff;
       display:flex; align-items:center; justify-content:center;
       padding: 14px;
       border-bottom:1px solid rgba(0,0,0,.06);
     }
-    .logo-img{
-      max-width: 92%;
-      max-height: 92%;
-      object-fit: contain;  /* nunca deformar */
-      display:block;
-    }
+    .logo-img{ max-width: 92%; max-height: 92%; object-fit: contain; display:block; }
 
-    /* Chips y botón compra */
+    /* Chips y botones */
     .chip{ display:inline-flex; align-items:center; gap:4px; padding:.2rem .45rem; border-radius:9999px; font-weight:600; font-size:11px; }
     .btn-buy{ width:100%; text-align:center; padding:.55rem .75rem; border-radius:12px; background:#7c3aed; color:#fff; font-weight:600; }
     .btn-buy:hover{ background:#6d28d9; }
+
+    /* Centrar precios */
+    .prices{ display:flex; flex-wrap:wrap; gap:.5rem; justify-content:center; }
   </style>
 </head>
 <body class="min-h-screen text-slate-100 bg-app">
@@ -55,8 +52,8 @@
   <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-900/60 backdrop-blur">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       <a href="#" class="flex items-center gap-3 font-extrabold text-lg tracking-tight">
-        <span class="inline-block w-8 h-8 rounded-2xl bg-violet-600 shadow"></span>
-        <span>Plataformas Aiden Barreto</span>
+        <span class="inline-block w-8 h-8 rounded-2xl bg-sky-500 shadow"></span>
+        <span>Streaming Aiden Barreto</span>
       </a>
       <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
         <a class="hover:text-violet-300" href="#catalogo">Catálogo</a>
@@ -81,10 +78,19 @@
     </div>
   </header>
 
-  <!-- Hero corto -->
+  <!-- Hero con descripción llamativa -->
   <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
-    <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-center">Catálogo de plataformas</h1>
-    <p class="mt-2 text-center text-slate-300/90">Todas las tarjetas tienen el mismo tamaño y los logos centrados.</p>
+    <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-center">Catálogo de streaming</h1>
+    <p class="mt-3 text-center text-slate-300/90 max-w-3xl mx-auto">
+      Activa tus plataformas favoritas con <span class="font-semibold text-white">seguridad total</span>,
+      <span class="font-semibold text-white">entrega rápida</span> y <span class="font-semibold text-white">soporte directo</span>.
+      Configuración oficial, <span class="font-semibold text-white">sin bajas</span> y con <span class="font-semibold text-white">acompañamiento</span> en todo momento.
+    </p>
+    <div class="mt-4 flex items-center justify-center gap-2 text-xs">
+      <span class="px-2 py-1 rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-400/30">Pago seguro</span>
+      <span class="px-2 py-1 rounded-full bg-sky-500/15 text-sky-300 border border-sky-400/30">Activación inmediata</span>
+      <span class="px-2 py-1 rounded-full bg-fuchsia-500/15 text-fuchsia-300 border border-fuchsia-400/30">Soporte 24/7</span>
+    </div>
   </section>
 
   <!-- Catálogo -->
@@ -97,15 +103,15 @@
           <div class="card-head bg-gradient-to-r from-rose-500 via-fuchsia-500 to-indigo-600">YOUTUBE PREMIUM</div>
           <div class="img-wrap"><img class="logo-img" alt="YouTube Premium" src="imagenes/youtubepremiumlogo.webp" /></div>
           <div class="p-6">
-            <div class="mt-3 flex flex-wrap gap-2">
+            <div class="prices mt-3">
               <span class="chip bg-yellow-100/90 text-yellow-800">S/ 3.00 · 1 mes</span>
               <span class="chip bg-emerald-100/90 text-emerald-800">S/ 9.00 · 3 meses</span>
               <span class="chip bg-indigo-100/90 text-indigo-800">S/ 75.00 · 1 año</span>
             </div>
             <div class="mt-4 grid grid-cols-3 gap-2">
-              <a class="btn-buy" data-whats data-servicio="YouTube Premium" data-plan="1 mes" data-precio="3.00">Comprar</a>
-              <a class="btn-buy" data-whats data-servicio="YouTube Premium" data-plan="3 meses" data-precio="9.00">3M</a>
-              <a class="btn-buy" data-whats data-servicio="YouTube Premium" data-plan="1 año" data-precio="75.00">1A</a>
+              <a class="btn-buy" data-whats data-servicio="YouTube Premium" data-plan="1 mes" data-precio="3.00">1 MES</a>
+              <a class="btn-buy" data-whats data-servicio="YouTube Premium" data-plan="3 meses" data-precio="9.00">3 MESES</a>
+              <a class="btn-buy" data-whats data-servicio="YouTube Premium" data-plan="1 año" data-precio="75.00">1 AÑO</a>
             </div>
           </div>
         </article>
@@ -115,15 +121,15 @@
           <div class="card-head bg-gradient-to-r from-red-600 to-orange-500">NETFLIX</div>
           <div class="img-wrap"><img class="logo-img" alt="Netflix" src="imagenes/netflixlogo.png" /></div>
           <div class="p-6">
-            <div class="mt-3 flex flex-wrap gap-2">
+            <div class="prices mt-3">
               <span class="chip bg-yellow-100/90 text-yellow-800">S/ 25 · 1 mes</span>
               <span class="chip bg-emerald-100/90 text-emerald-800">S/ 70 · 3 meses</span>
               <span class="chip bg-indigo-100/90 text-indigo-800">S/ 260 · 1 año</span>
             </div>
             <div class="mt-4 grid grid-cols-3 gap-2">
-              <a class="btn-buy" data-whats data-servicio="Netflix" data-plan="1 mes" data-precio="25">Comprar</a>
-              <a class="btn-buy" data-whats data-servicio="Netflix" data-plan="3 meses" data-precio="70">3M</a>
-              <a class="btn-buy" data-whats data-servicio="Netflix" data-plan="1 año" data-precio="260">1A</a>
+              <a class="btn-buy" data-whats data-servicio="Netflix" data-plan="1 mes" data-precio="25">1 MES</a>
+              <a class="btn-buy" data-whats data-servicio="Netflix" data-plan="3 meses" data-precio="70">3 MESES</a>
+              <a class="btn-buy" data-whats data-servicio="Netflix" data-plan="1 año" data-precio="260">1 AÑO</a>
             </div>
           </div>
         </article>
@@ -133,15 +139,15 @@
           <div class="card-head bg-gradient-to-r from-sky-500 to-blue-600">DISNEY+</div>
           <div class="img-wrap"><img class="logo-img" alt="Disney+" src="imagenes/disney+logo.jpg" /></div>
           <div class="p-6">
-            <div class="mt-3 flex flex-wrap gap-2">
+            <div class="prices mt-3">
               <span class="chip bg-yellow-100/90 text-yellow-800">S/ 20 · 1 mes</span>
               <span class="chip bg-emerald-100/90 text-emerald-800">S/ 55 · 3 meses</span>
               <span class="chip bg-indigo-100/90 text-indigo-800">S/ 200 · 1 año</span>
             </div>
             <div class="mt-4 grid grid-cols-3 gap-2">
-              <a class="btn-buy" data-whats data-servicio="Disney+" data-plan="1 mes" data-precio="20">Comprar</a>
-              <a class="btn-buy" data-whats data-servicio="Disney+" data-plan="3 meses" data-precio="55">3M</a>
-              <a class="btn-buy" data-whats data-servicio="Disney+" data-plan="1 año" data-precio="200">1A</a>
+              <a class="btn-buy" data-whats data-servicio="Disney+" data-plan="1 mes" data-precio="20">1 MES</a>
+              <a class="btn-buy" data-whats data-servicio="Disney+" data-plan="3 meses" data-precio="55">3 MESES</a>
+              <a class="btn-buy" data-whats data-servicio="Disney+" data-plan="1 año" data-precio="200">1 AÑO</a>
             </div>
           </div>
         </article>
@@ -151,15 +157,15 @@
           <div class="card-head bg-gradient-to-r from-cyan-600 to-slate-700">PRIME VIDEO</div>
           <div class="img-wrap"><img class="logo-img" alt="Prime Video" src="imagenes/primevideologo.png" /></div>
           <div class="p-6">
-            <div class="mt-3 flex flex-wrap gap-2">
+            <div class="prices mt-3">
               <span class="chip bg-yellow-100/90 text-yellow-800">S/ 18 · 1 mes</span>
               <span class="chip bg-emerald-100/90 text-emerald-800">S/ 50 · 3 meses</span>
               <span class="chip bg-indigo-100/90 text-indigo-800">S/ 180 · 1 año</span>
             </div>
             <div class="mt-4 grid grid-cols-3 gap-2">
-              <a class="btn-buy" data-whats data-servicio="Prime Video" data-plan="1 mes" data-precio="18">Comprar</a>
-              <a class="btn-buy" data-whats data-servicio="Prime Video" data-plan="3 meses" data-precio="50">3M</a>
-              <a class="btn-buy" data-whats data-servicio="Prime Video" data-plan="1 año" data-precio="180">1A</a>
+              <a class="btn-buy" data-whats data-servicio="Prime Video" data-plan="1 mes" data-precio="18">1 MES</a>
+              <a class="btn-buy" data-whats data-servicio="Prime Video" data-plan="3 meses" data-precio="50">3 MESES</a>
+              <a class="btn-buy" data-whats data-servicio="Prime Video" data-plan="1 año" data-precio="180">1 AÑO</a>
             </div>
           </div>
         </article>
@@ -169,15 +175,15 @@
           <div class="card-head bg-gradient-to-r from-blue-700 to-sky-600">PARAMOUNT+</div>
           <div class="img-wrap"><img class="logo-img" alt="Paramount+" src="imagenes/paramount+logo.webp" /></div>
           <div class="p-6">
-            <div class="mt-3 flex flex-wrap gap-2">
+            <div class="prices mt-3">
               <span class="chip bg-yellow-100/90 text-yellow-800">S/ 15 · 1 mes</span>
               <span class="chip bg-emerald-100/90 text-emerald-800">S/ 40 · 3 meses</span>
               <span class="chip bg-indigo-100/90 text-indigo-800">S/ 150 · 1 año</span>
             </div>
             <div class="mt-4 grid grid-cols-3 gap-2">
-              <a class="btn-buy" data-whats data-servicio="Paramount+" data-plan="1 mes" data-precio="15">Comprar</a>
-              <a class="btn-buy" data-whats data-servicio="Paramount+" data-plan="3 meses" data-precio="40">3M</a>
-              <a class="btn-buy" data-whats data-servicio="Paramount+" data-plan="1 año" data-precio="150">1A</a>
+              <a class="btn-buy" data-whats data-servicio="Paramount+" data-plan="1 mes" data-precio="15">1 MES</a>
+              <a class="btn-buy" data-whats data-servicio="Paramount+" data-plan="3 meses" data-precio="40">3 MESES</a>
+              <a class="btn-buy" data-whats data-servicio="Paramount+" data-plan="1 año" data-precio="150">1 AÑO</a>
             </div>
           </div>
         </article>
@@ -187,15 +193,15 @@
           <div class="card-head bg-gradient-to-r from-purple-600 to-fuchsia-500">STAR+</div>
           <div class="img-wrap"><img class="logo-img" alt="Star+" src="imagenes/star+logo.webp" /></div>
           <div class="p-6">
-            <div class="mt-3 flex flex-wrap gap-2">
+            <div class="prices mt-3">
               <span class="chip bg-yellow-100/90 text-yellow-800">S/ 20 · 1 mes</span>
               <span class="chip bg-emerald-100/90 text-emerald-800">S/ 55 · 3 meses</span>
               <span class="chip bg-indigo-100/90 text-indigo-800">S/ 200 · 1 año</span>
             </div>
             <div class="mt-4 grid grid-cols-3 gap-2">
-              <a class="btn-buy" data-whats data-servicio="Star+" data-plan="1 mes" data-precio="20">Comprar</a>
-              <a class="btn-buy" data-whats data-servicio="Star+" data-plan="3 meses" data-precio="55">3M</a>
-              <a class="btn-buy" data-whats data-servicio="Star+" data-plan="1 año" data-precio="200">1A</a>
+              <a class="btn-buy" data-whats data-servicio="Star+" data-plan="1 mes" data-precio="20">1 MES</a>
+              <a class="btn-buy" data-whats data-servicio="Star+" data-plan="3 meses" data-precio="55">3 MESES</a>
+              <a class="btn-buy" data-whats data-servicio="Star+" data-plan="1 año" data-precio="200">1 AÑO</a>
             </div>
           </div>
         </article>
@@ -205,15 +211,15 @@
           <div class="card-head bg-gradient-to-r from-amber-500 to-red-500">LIGA1MAX</div>
           <div class="img-wrap"><img class="logo-img" alt="Liga1MAX" src="imagenes/l1maxlogo.png" /></div>
           <div class="p-6">
-            <div class="mt-3 flex flex-wrap gap-2">
+            <div class="prices mt-3">
               <span class="chip bg-yellow-100/90 text-yellow-800">S/ 29 · 1 mes</span>
               <span class="chip bg-emerald-100/90 text-emerald-800">S/ 82 · 3 meses</span>
               <span class="chip bg-indigo-100/90 text-indigo-800">S/ 300 · 1 año</span>
             </div>
             <div class="mt-4 grid grid-cols-3 gap-2">
-              <a class="btn-buy" data-whats data-servicio="Liga1MAX" data-plan="1 mes" data-precio="29">Comprar</a>
-              <a class="btn-buy" data-whats data-servicio="Liga1MAX" data-plan="3 meses" data-precio="82">3M</a>
-              <a class="btn-buy" data-whats data-servicio="Liga1MAX" data-plan="1 año" data-precio="300">1A</a>
+              <a class="btn-buy" data-whats data-servicio="Liga1MAX" data-plan="1 mes" data-precio="29">1 MES</a>
+              <a class="btn-buy" data-whats data-servicio="Liga1MAX" data-plan="3 meses" data-precio="82">3 MESES</a>
+              <a class="btn-buy" data-whats data-servicio="Liga1MAX" data-plan="1 año" data-precio="300">1 AÑO</a>
             </div>
           </div>
         </article>
@@ -223,15 +229,15 @@
           <div class="card-head bg-gradient-to-r from-orange-500 to-rose-500">VIX PREMIUM</div>
           <div class="img-wrap"><img class="logo-img" alt="ViX Premium" src="imagenes/vixpremiumlogo.jpg" /></div>
           <div class="p-6">
-            <div class="mt-3 flex flex-wrap gap-2">
+            <div class="prices mt-3">
               <span class="chip bg-yellow-100/90 text-yellow-800">S/ 16 · 1 mes</span>
               <span class="chip bg-emerald-100/90 text-emerald-800">S/ 45 · 3 meses</span>
               <span class="chip bg-indigo-100/90 text-indigo-800">S/ 170 · 1 año</span>
             </div>
             <div class="mt-4 grid grid-cols-3 gap-2">
-              <a class="btn-buy" data-whats data-servicio="ViX Premium" data-plan="1 mes" data-precio="16">Comprar</a>
-              <a class="btn-buy" data-whats data-servicio="ViX Premium" data-plan="3 meses" data-precio="45">3M</a>
-              <a class="btn-buy" data-whats data-servicio="ViX Premium" data-plan="1 año" data-precio="170">1A</a>
+              <a class="btn-buy" data-whats data-servicio="ViX Premium" data-plan="1 mes" data-precio="16">1 MES</a>
+              <a class="btn-buy" data-whats data-servicio="ViX Premium" data-plan="3 meses" data-precio="45">3 MESES</a>
+              <a class="btn-buy" data-whats data-servicio="ViX Premium" data-plan="1 año" data-precio="170">1 AÑO</a>
             </div>
           </div>
         </article>
@@ -241,15 +247,15 @@
           <div class="card-head bg-gradient-to-r from-amber-500 to-orange-600">CRUNCHYROLL</div>
           <div class="img-wrap"><img class="logo-img" alt="Crunchyroll" src="imagenes/crunchyrolllogo.png" /></div>
           <div class="p-6">
-            <div class="mt-3 flex flex-wrap gap-2">
+            <div class="prices mt-3">
               <span class="chip bg-yellow-100/90 text-yellow-800">S/ 17 · 1 mes</span>
               <span class="chip bg-emerald-100/90 text-emerald-800">S/ 48 · 3 meses</span>
               <span class="chip bg-indigo-100/90 text-indigo-800">S/ 180 · 1 año</span>
             </div>
             <div class="mt-4 grid grid-cols-3 gap-2">
-              <a class="btn-buy" data-whats data-servicio="Crunchyroll" data-plan="1 mes" data-precio="17">Comprar</a>
-              <a class="btn-buy" data-whats data-servicio="Crunchyroll" data-plan="3 meses" data-precio="48">3M</a>
-              <a class="btn-buy" data-whats data-servicio="Crunchyroll" data-plan="1 año" data-precio="180">1A</a>
+              <a class="btn-buy" data-whats data-servicio="Crunchyroll" data-plan="1 mes" data-precio="17">1 MES</a>
+              <a class="btn-buy" data-whats data-servicio="Crunchyroll" data-plan="3 meses" data-precio="48">3 MESES</a>
+              <a class="btn-buy" data-whats data-servicio="Crunchyroll" data-plan="1 año" data-precio="180">1 AÑO</a>
             </div>
           </div>
         </article>
@@ -259,15 +265,15 @@
           <div class="card-head bg-gradient-to-r from-indigo-700 to-blue-700">MAX</div>
           <div class="img-wrap"><img class="logo-img" alt="Max" src="imagenes/hbomaxlogo.png" /></div>
           <div class="p-6">
-            <div class="mt-3 flex flex-wrap gap-2">
+            <div class="prices mt-3">
               <span class="chip bg-yellow-100/90 text-yellow-800">S/ 22 · 1 mes</span>
               <span class="chip bg-emerald-100/90 text-emerald-800">S/ 60 · 3 meses</span>
               <span class="chip bg-indigo-100/90 text-indigo-800">S/ 220 · 1 año</span>
             </div>
             <div class="mt-4 grid grid-cols-3 gap-2">
-              <a class="btn-buy" data-whats data-servicio="Max" data-plan="1 mes" data-precio="22">Comprar</a>
-              <a class="btn-buy" data-whats data-servicio="Max" data-plan="3 meses" data-precio="60">3M</a>
-              <a class="btn-buy" data-whats data-servicio="Max" data-plan="1 año" data-precio="220">1A</a>
+              <a class="btn-buy" data-whats data-servicio="Max" data-plan="1 mes" data-precio="22">1 MES</a>
+              <a class="btn-buy" data-whats data-servicio="Max" data-plan="3 meses" data-precio="60">3 MESES</a>
+              <a class="btn-buy" data-whats data-servicio="Max" data-plan="1 año" data-precio="220">1 AÑO</a>
             </div>
           </div>
         </article>
@@ -277,15 +283,15 @@
           <div class="card-head bg-gradient-to-r from-slate-900 to-slate-700">CAPCUT PRO</div>
           <div class="img-wrap"><img class="logo-img" alt="CapCut Pro" src="imagenes/capcutprologo.png" /></div>
           <div class="p-6">
-            <div class="mt-3 flex flex-wrap gap-2">
+            <div class="prices mt-3">
               <span class="chip bg-yellow-100/90 text-yellow-800">S/ 15 · 1 mes</span>
               <span class="chip bg-emerald-100/90 text-emerald-800">S/ 40 · 3 meses</span>
               <span class="chip bg-indigo-100/90 text-indigo-800">S/ 150 · 1 año</span>
             </div>
             <div class="mt-4 grid grid-cols-3 gap-2">
-              <a class="btn-buy" data-whats data-servicio="CapCut Pro" data-plan="1 mes" data-precio="15">Comprar</a>
-              <a class="btn-buy" data-whats data-servicio="CapCut Pro" data-plan="3 meses" data-precio="40">3M</a>
-              <a class="btn-buy" data-whats data-servicio="CapCut Pro" data-plan="1 año" data-precio="150">1A</a>
+              <a class="btn-buy" data-whats data-servicio="CapCut Pro" data-plan="1 mes" data-precio="15">1 MES</a>
+              <a class="btn-buy" data-whats data-servicio="CapCut Pro" data-plan="3 meses" data-precio="40">3 MESES</a>
+              <a class="btn-buy" data-whats data-servicio="CapCut Pro" data-plan="1 año" data-precio="150">1 AÑO</a>
             </div>
           </div>
         </article>
@@ -295,15 +301,15 @@
           <div class="card-head bg-gradient-to-r from-teal-500 to-emerald-600">CANVA PRO</div>
           <div class="img-wrap"><img class="logo-img" alt="Canva Pro" src="imagenes/canvaprologo.png" /></div>
           <div class="p-6">
-            <div class="mt-3 flex flex-wrap gap-2">
+            <div class="prices mt-3">
               <span class="chip bg-yellow-100/90 text-yellow-800">S/ 20 · 1 mes</span>
               <span class="chip bg-emerald-100/90 text-emerald-800">S/ 55 · 3 meses</span>
               <span class="chip bg-indigo-100/90 text-indigo-800">S/ 200 · 1 año</span>
             </div>
             <div class="mt-4 grid grid-cols-3 gap-2">
-              <a class="btn-buy" data-whats data-servicio="Canva Pro" data-plan="1 mes" data-precio="20">Comprar</a>
-              <a class="btn-buy" data-whats data-servicio="Canva Pro" data-plan="3 meses" data-precio="55">3M</a>
-              <a class="btn-buy" data-whats data-servicio="Canva Pro" data-plan="1 año" data-precio="200">1A</a>
+              <a class="btn-buy" data-whats data-servicio="Canva Pro" data-plan="1 mes" data-precio="20">1 MES</a>
+              <a class="btn-buy" data-whats data-servicio="Canva Pro" data-plan="3 meses" data-precio="55">3 MESES</a>
+              <a class="btn-buy" data-whats data-servicio="Canva Pro" data-plan="1 año" data-precio="200">1 AÑO</a>
             </div>
           </div>
         </article>
@@ -313,15 +319,15 @@
           <div class="card-head bg-gradient-to-r from-rose-500 to-pink-600">DRAMA BOX</div>
           <div class="img-wrap"><img class="logo-img" alt="Drama Box" src="imagenes/dramaboxlogo.jpeg" /></div>
           <div class="p-6">
-            <div class="mt-3 flex flex-wrap gap-2">
+            <div class="prices mt-3">
               <span class="chip bg-yellow-100/90 text-yellow-800">S/ 12 · 1 mes</span>
               <span class="chip bg-emerald-100/90 text-emerald-800">S/ 34 · 3 meses</span>
               <span class="chip bg-indigo-100/90 text-indigo-800">S/ 120 · 1 año</span>
             </div>
             <div class="mt-4 grid grid-cols-3 gap-2">
-              <a class="btn-buy" data-whats data-servicio="Drama Box" data-plan="1 mes" data-precio="12">Comprar</a>
-              <a class="btn-buy" data-whats data-servicio="Drama Box" data-plan="3 meses" data-precio="34">3M</a>
-              <a class="btn-buy" data-whats data-servicio="Drama Box" data-plan="1 año" data-precio="120">1A</a>
+              <a class="btn-buy" data-whats data-servicio="Drama Box" data-plan="1 mes" data-precio="12">1 MES</a>
+              <a class="btn-buy" data-whats data-servicio="Drama Box" data-plan="3 meses" data-precio="34">3 MESES</a>
+              <a class="btn-buy" data-whats data-servicio="Drama Box" data-plan="1 año" data-precio="120">1 AÑO</a>
             </div>
           </div>
         </article>
@@ -331,15 +337,15 @@
           <div class="card-head bg-gradient-to-r from-rose-600 to-red-600">CLARO VIDEO</div>
           <div class="img-wrap"><img class="logo-img" alt="Claro Video" src="imagenes/clarovideologo.png" /></div>
           <div class="p-6">
-            <div class="mt-3 flex flex-wrap gap-2">
+            <div class="prices mt-3">
               <span class="chip bg-yellow-100/90 text-yellow-800">S/ 14 · 1 mes</span>
               <span class="chip bg-emerald-100/90 text-emerald-800">S/ 39 · 3 meses</span>
               <span class="chip bg-indigo-100/90 text-indigo-800">S/ 145 · 1 año</span>
             </div>
             <div class="mt-4 grid grid-cols-3 gap-2">
-              <a class="btn-buy" data-whats data-servicio="Claro Video" data-plan="1 mes" data-precio="14">Comprar</a>
-              <a class="btn-buy" data-whats data-servicio="Claro Video" data-plan="3 meses" data-precio="39">3M</a>
-              <a class="btn-buy" data-whats data-servicio="Claro Video" data-plan="1 año" data-precio="145">1A</a>
+              <a class="btn-buy" data-whats data-servicio="Claro Video" data-plan="1 mes" data-precio="14">1 MES</a>
+              <a class="btn-buy" data-whats data-servicio="Claro Video" data-plan="3 meses" data-precio="39">3 MESES</a>
+              <a class="btn-buy" data-whats data-servicio="Claro Video" data-plan="1 año" data-precio="145">1 AÑO</a>
             </div>
           </div>
         </article>
@@ -349,15 +355,15 @@
           <div class="card-head bg-gradient-to-r from-sky-700 to-cyan-600">MOVISTAR PLAY</div>
           <div class="img-wrap"><img class="logo-img" alt="Movistar Play" src="imagenes/movistarplaylogo.png" /></div>
           <div class="p-6">
-            <div class="mt-3 flex flex-wrap gap-2">
+            <div class="prices mt-3">
               <span class="chip bg-yellow-100/90 text-yellow-800">S/ 16 · 1 mes</span>
               <span class="chip bg-emerald-100/90 text-emerald-800">S/ 44 · 3 meses</span>
               <span class="chip bg-indigo-100/90 text-indigo-800">S/ 165 · 1 año</span>
             </div>
             <div class="mt-4 grid grid-cols-3 gap-2">
-              <a class="btn-buy" data-whats data-servicio="Movistar Play" data-plan="1 mes" data-precio="16">Comprar</a>
-              <a class="btn-buy" data-whats data-servicio="Movistar Play" data-plan="3 meses" data-precio="44">3M</a>
-              <a class="btn-buy" data-whats data-servicio="Movistar Play" data-plan="1 año" data-precio="165">1A</a>
+              <a class="btn-buy" data-whats data-servicio="Movistar Play" data-plan="1 mes" data-precio="16">1 MES</a>
+              <a class="btn-buy" data-whats data-servicio="Movistar Play" data-plan="3 meses" data-precio="44">3 MESES</a>
+              <a class="btn-buy" data-whats data-servicio="Movistar Play" data-plan="1 año" data-precio="165">1 AÑO</a>
             </div>
           </div>
         </article>
@@ -367,15 +373,15 @@
           <div class="card-head bg-gradient-to-r from-lime-500 to-green-600">IPTV</div>
           <div class="img-wrap"><img class="logo-img" alt="IPTV" src="imagenes/iptvlogo.jpg" /></div>
           <div class="p-6">
-            <div class="mt-3 flex flex-wrap gap-2">
+            <div class="prices mt-3">
               <span class="chip bg-yellow-100/90 text-yellow-800">S/ 30 · 1 mes</span>
               <span class="chip bg-emerald-100/90 text-emerald-800">S/ 85 · 3 meses</span>
               <span class="chip bg-indigo-100/90 text-indigo-800">S/ 320 · 1 año</span>
             </div>
             <div class="mt-4 grid grid-cols-3 gap-2">
-              <a class="btn-buy" data-whats data-servicio="IPTV" data-plan="1 mes" data-precio="30">Comprar</a>
-              <a class="btn-buy" data-whats data-servicio="IPTV" data-plan="3 meses" data-precio="85">3M</a>
-              <a class="btn-buy" data-whats data-servicio="IPTV" data-plan="1 año" data-precio="320">1A</a>
+              <a class="btn-buy" data-whats data-servicio="IPTV" data-plan="1 mes" data-precio="30">1 MES</a>
+              <a class="btn-buy" data-whats data-servicio="IPTV" data-plan="3 meses" data-precio="85">3 MESES</a>
+              <a class="btn-buy" data-whats data-servicio="IPTV" data-plan="1 año" data-precio="320">1 AÑO</a>
             </div>
           </div>
         </article>
@@ -385,15 +391,15 @@
           <div class="card-head bg-gradient-to-r from-slate-800 to-slate-600">CHATGPT PLUS</div>
           <div class="img-wrap"><img class="logo-img" alt="ChatGPT Plus" src="imagenes/chatgptpluslogo.png" /></div>
           <div class="p-6">
-            <div class="mt-3 flex flex-wrap gap-2">
+            <div class="prices mt-3">
               <span class="chip bg-yellow-100/90 text-yellow-800">S/ 45 · 1 mes</span>
               <span class="chip bg-emerald-100/90 text-emerald-800">S/ 125 · 3 meses</span>
               <span class="chip bg-indigo-100/90 text-indigo-800">S/ 480 · 1 año</span>
             </div>
             <div class="mt-4 grid grid-cols-3 gap-2">
-              <a class="btn-buy" data-whats data-servicio="ChatGPT Plus" data-plan="1 mes" data-precio="45">Comprar</a>
-              <a class="btn-buy" data-whats data-servicio="ChatGPT Plus" data-plan="3 meses" data-precio="125">3M</a>
-              <a class="btn-buy" data-whats data-servicio="ChatGPT Plus" data-plan="1 año" data-precio="480">1A</a>
+              <a class="btn-buy" data-whats data-servicio="ChatGPT Plus" data-plan="1 mes" data-precio="45">1 MES</a>
+              <a class="btn-buy" data-whats data-servicio="ChatGPT Plus" data-plan="3 meses" data-precio="125">3 MESES</a>
+              <a class="btn-buy" data-whats data-servicio="ChatGPT Plus" data-plan="1 año" data-precio="480">1 AÑO</a>
             </div>
           </div>
         </article>
@@ -403,15 +409,15 @@
           <div class="card-head bg-gradient-to-r from-emerald-500 to-teal-600">SPOTIFY PREMIUM</div>
           <div class="img-wrap"><img class="logo-img" alt="Spotify Premium" src="imagenes/spotifypremium.jpeg" /></div>
           <div class="p-6">
-            <div class="mt-3 flex flex-wrap gap-2">
+            <div class="prices mt-3">
               <span class="chip bg-yellow-100/90 text-yellow-800">S/ 18 · 1 mes</span>
               <span class="chip bg-emerald-100/90 text-emerald-800">S/ 50 · 3 meses</span>
               <span class="chip bg-indigo-100/90 text-indigo-800">S/ 190 · 1 año</span>
             </div>
             <div class="mt-4 grid grid-cols-3 gap-2">
-              <a class="btn-buy" data-whats data-servicio="Spotify Premium" data-plan="1 mes" data-precio="18">Comprar</a>
-              <a class="btn-buy" data-whats data-servicio="Spotify Premium" data-plan="3 meses" data-precio="50">3M</a>
-              <a class="btn-buy" data-whats data-servicio="Spotify Premium" data-plan="1 año" data-precio="190">1A</a>
+              <a class="btn-buy" data-whats data-servicio="Spotify Premium" data-plan="1 mes" data-precio="18">1 MES</a>
+              <a class="btn-buy" data-whats data-servicio="Spotify Premium" data-plan="3 meses" data-precio="50">3 MESES</a>
+              <a class="btn-buy" data-whats data-servicio="Spotify Premium" data-plan="1 año" data-precio="190">1 AÑO</a>
             </div>
           </div>
         </article>
@@ -421,15 +427,15 @@
           <div class="card-head bg-gradient-to-r from-sky-500 to-indigo-600">DGO</div>
           <div class="img-wrap"><img class="logo-img" alt="DGO" src="imagenes/dgologo.png" /></div>
           <div class="p-6">
-            <div class="mt-3 flex flex-wrap gap-2">
+            <div class="prices mt-3">
               <span class="chip bg-yellow-100/90 text-yellow-800">S/ 19 · 1 mes</span>
               <span class="chip bg-emerald-100/90 text-emerald-800">S/ 52 · 3 meses</span>
               <span class="chip bg-indigo-100/90 text-indigo-800">S/ 195 · 1 año</span>
             </div>
             <div class="mt-4 grid grid-cols-3 gap-2">
-              <a class="btn-buy" data-whats data-servicio="DGO" data-plan="1 mes" data-precio="19">Comprar</a>
-              <a class="btn-buy" data-whats data-servicio="DGO" data-plan="3 meses" data-precio="52">3M</a>
-              <a class="btn-buy" data-whats data-servicio="DGO" data-plan="1 año" data-precio="195">1A</a>
+              <a class="btn-buy" data-whats data-servicio="DGO" data-plan="1 mes" data-precio="19">1 MES</a>
+              <a class="btn-buy" data-whats data-servicio="DGO" data-plan="3 meses" data-precio="52">3 MESES</a>
+              <a class="btn-buy" data-whats data-servicio="DGO" data-plan="1 año" data-precio="195">1 AÑO</a>
             </div>
           </div>
         </article>
@@ -442,11 +448,52 @@
     </div>
   </section>
 
+  <!-- FAQ -->
+  <section id="faq" class="py-16 lg:py-24 bg-slate-900/30">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-extrabold tracking-tight text-center">Preguntas frecuentes</h2>
+      <div class="mt-8 divide-y divide-white/10" id="faqRoot">
+        <details class="group py-4">
+          <summary class="flex cursor-pointer items-center justify-between text-left list-none">
+            <span class="font-semibold">¿Pueden gestionar todo por mí?</span>
+            <span class="transition group-open:rotate-180">⌄</span>
+          </summary>
+          <div class="mt-2 text-slate-300 text-sm">Sí, te guiamos paso a paso para activar tus suscripciones oficiales y seguras.</div>
+        </details>
+        <details class="group py-4">
+          <summary class="flex cursor-pointer items-center justify-between text-left list-none">
+            <span class="font-semibold">¿Cómo se contactan?</span>
+            <span class="transition group-open:rotate-180">⌄</span>
+          </summary>
+          <div class="mt-2 text-slate-300 text-sm">Directo por WhatsApp al <strong>+51 929 162 254</strong> desde los botones del catálogo.</div>
+        </details>
+        <details class="group py-4">
+          <summary class="flex cursor-pointer items-center justify-between text-left list-none">
+            <span class="font-semibold">¿Venden cuentas no autorizadas?</span>
+            <span class="transition group-open:rotate-180">⌄</span>
+          </summary>
+          <div class="mt-2 text-slate-300 text-sm">No. Te ayudamos a contratar directamente con cada servicio y cumplir sus términos.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
   <!-- Contacto -->
   <section id="contacto" class="py-16">
     <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
       <h2 class="text-3xl font-extrabold tracking-tight text-center">Contáctanos</h2>
-      <form id="formContacto" class="mt-8 space-y-4" novalidate>
+      <!--
+        ENVÍO ACTUAL: "mailto" (abre el cliente de correo del usuario y te manda a adribarremar@gmail.com).
+        Es lo más simple y funciona en GitHub Pages sin backend.
+
+        SI QUIERES ENVÍO DIRECTO (sin abrir correo) RECOMENDADO:
+        - Usa Formspree (gratis). Pasos:
+          1) Ve a https://formspree.io  > Sign up (con tu email adribarremar@gmail.com).
+          2) Create form -> te dará una URL tipo: https://formspree.io/f/xxxxxx
+          3) Cambia el "action" de este formulario por esa URL y listo (llegarán a tu Gmail).
+      -->
+      <form id="formContacto" class="mt-8 space-y-4"
+            action="mailto:adribarremar@gmail.com" method="POST" enctype="text/plain" novalidate>
         <div>
           <label for="nombre" class="block text-sm font-medium">Nombre</label>
           <input id="nombre" name="nombre" type="text" required class="mt-1 w-full rounded-xl border border-white/20 bg-white/5 text-white px-4 py-2 outline-none focus:[box-shadow:var(--ring)]" placeholder="Tu nombre" />
@@ -474,7 +521,7 @@
   <!-- Footer -->
   <footer class="border-t border-white/10 py-8">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-slate-300">
-      <p>© <span id="year"></span> Plataformas Aiden Barreto. Todos los derechos reservados.</p>
+      <p>© <span id="year"></span> Streaming Aiden Barreto. Todos los derechos reservados.</p>
       <nav class="flex items-center gap-4">
         <a href="#" class="hover:text-violet-300">Privacidad</a>
         <a href="#" class="hover:text-violet-300">Términos</a>
@@ -486,8 +533,8 @@
   <!-- JS -->
   <script>
     const PHONE = '51929162254';
-    const MENSAJE_BASE = 'Hola, vengo de la web de Plataformas Aiden Barreto. Quiero más info.';
-    const linkWhats = (texto) => `https://wa.me/${PHONE}?text=${encodeURIComponent(texto)}`;
+    const MENSAJE_BASE = 'Hola, vengo de la web de Streaming Aiden Barreto. Quiero más info.';
+    const linkWhats = (t) => `https://wa.me/${PHONE}?text=${encodeURIComponent(t)}`;
 
     document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -499,6 +546,7 @@
     document.getElementById('btnWhatsHeader').href = linkWhats(txtHeader);
     document.getElementById('btnWhatsMobile').href = linkWhats(txtHeader);
 
+    // WhatsApp por producto
     document.querySelectorAll('[data-whats]').forEach(btn => {
       btn.addEventListener('click', (e) => {
         e.preventDefault();
@@ -510,7 +558,7 @@
       });
     });
 
-    // Form
+    // Validación mínima (visual)
     const form = document.getElementById('formContacto');
     const estado = document.getElementById('estado');
     function validarCampo(el, tipo) {
@@ -523,28 +571,14 @@
       el.classList.toggle('ring-rose-400', !ok);
       return ok;
     }
-    form?.addEventListener('submit', async (e) => {
-      e.preventDefault();
+    form?.addEventListener('submit', (e) => {
       const nombre = document.getElementById('nombre');
       const email = document.getElementById('email');
       const mensaje = document.getElementById('mensaje');
       const legal = document.getElementById('legal');
-
-      const ok = [
-        validarCampo(nombre),
-        validarCampo(email, 'email'),
-        validarCampo(mensaje),
-        legal.checked
-      ].every(Boolean);
-
-      if (!ok) { estado.textContent = 'Revisa los campos marcados.'; estado.className = 'text-sm text-rose-400'; return; }
-
-      estado.textContent = 'Enviando…';
-      estado.className = 'text-sm text-slate-300';
-      await new Promise(r => setTimeout(r, 500));
-      estado.textContent = '¡Mensaje enviado! Te responderemos pronto.';
-      estado.className = 'text-sm text-emerald-400';
-      form.reset();
+      const ok = [validarCampo(nombre), validarCampo(email,'email'), validarCampo(mensaje), legal.checked].every(Boolean);
+      if (!ok) { e.preventDefault(); estado.textContent = 'Revisa los campos marcados.'; estado.className = 'text-sm text-rose-400'; }
+      else { estado.textContent = 'Abriendo tu cliente de correo…'; estado.className = 'text-sm text-slate-300'; }
     });
   </script>
 </body>
