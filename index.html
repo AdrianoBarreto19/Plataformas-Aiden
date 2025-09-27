@@ -38,12 +38,25 @@
     .logo-img{ max-width: 92%; max-height: 92%; object-fit: contain; display:block; }
 
     /* Chips y botones */
-    .chip{ display:inline-flex; align-items:center; gap:4px; padding:.2rem .45rem; border-radius:9999px; font-weight:600; font-size:11px; }
-    .btn-buy{ width:100%; text-align:center; padding:.55rem .75rem; border-radius:12px; background:#7c3aed; color:#fff; font-weight:600; }
-    .btn-buy:hover{ background:#6d28d9; }
+.chip{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center; /* <-- nuevo */
+  gap:4px;
+  padding:.32rem .5rem;
+  border-radius:9999px;
+  font-weight:600;
+  font-size:11px;
+  width:100%;             /* <-- nuevo: para que llene su columna */
+  white-space:nowrap;     /* evita que el texto del chip se parta */
+}
 
     /* Centrar precios */
-    .prices{ display:flex; flex-wrap:wrap; gap:.5rem; justify-content:center; }
+   .prices{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: .5rem;
+}
   </style>
 
   <!-- Schema.org (básico) -->
@@ -257,7 +270,7 @@
   <!-- DRAMA BOX (corregido: ahora es una tarjeta completa) -->
   <article class="card">
     <div class="card-head bg-gradient-to-r from-amber-200 to-indigo-200 text-slate-900">DRAMA BOX</div>
-    <div class="img-wrap"><img class="logo-img" alt="Drama Box" src="imagenes/dramaboxlogo.jpg" /></div>
+    <div class="img-wrap"><img class="logo-img" alt="Drama Box" src="imagenes/dramaboxlogo.jpeg" /></div>
     <div class="p-6">
       <div class="prices mt-3">
         <span class="chip bg-yellow-100/90 text-yellow-800">S/ 26.99 · 1 mes</span>
@@ -683,5 +696,6 @@ form?.addEventListener('submit', async (e) => {
   </script>
 </body>
 </html>
+
 
 
