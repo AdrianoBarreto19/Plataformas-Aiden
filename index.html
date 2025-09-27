@@ -14,22 +14,39 @@
     :root { --ring: 0 0 0 3px rgb(124 58 237 / 35%); }
     html { scroll-behavior: smooth; }
     body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial; }
-    /* Fondo elegante */
-    .bg-app {
+
+    /* Fondo que dijiste que está bien */
+    .bg-app{
       background:
         radial-gradient(1200px 600px at 10% -10%, rgba(99,102,241,.22), transparent 60%),
         radial-gradient(900px 500px at 90% 0%, rgba(168,85,247,.18), transparent 60%),
         linear-gradient(180deg, #0b1220 0%, #1b1440 50%, #240e57 100%);
     }
+
     /* Tarjeta consistente */
-    .card { @apply rounded-2xl border border-slate-800/50 bg-slate-900/60 shadow-lg hover:shadow-xl transition overflow-hidden backdrop-blur; }
-    .card-head { @apply px-6 pt-4 pb-3 text-white font-extrabold text-center text-sm tracking-wide; }
-    /* Marco de imagen uniforme (16:9) y SIN distorsión */
-    .img-wrap { @apply w-full aspect-video bg-white flex items-center justify-center p-6; }
-    .logo-img { @apply max-h-full max-w-full object-contain; }
-    /* Chips de precio */
-    .chip { @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-semibold; }
-    .btn-buy { @apply w-full text-center px-3 py-2 rounded-xl bg-violet-600 text-white hover:bg-violet-700; }
+    .card{ border-radius: 16px; border:1px solid rgba(255,255,255,.08); background: rgba(2,6,23,.55); box-shadow: 0 10px 30px rgba(0,0,0,.25); overflow:hidden; backdrop-filter: blur(4px); }
+    .card-head{ padding: 12px 24px; font-weight: 800; text-align:center; color:#fff; letter-spacing:.3px; font-size: .95rem; border-bottom:1px solid rgba(255,255,255,.06); }
+
+    /* === IGUALADOR DE LOGOS (todas iguales, centradas y sin distorsión) === */
+    .img-wrap{
+      height: 220px;        /* alto igual para TODAS */
+      width: 100%;
+      background: #ffffff;  /* fondo blanco para que el logo resalte */
+      display:flex; align-items:center; justify-content:center;
+      padding: 14px;
+      border-bottom:1px solid rgba(0,0,0,.06);
+    }
+    .logo-img{
+      max-width: 92%;
+      max-height: 92%;
+      object-fit: contain;  /* nunca deformar */
+      display:block;
+    }
+
+    /* Chips y botón compra */
+    .chip{ display:inline-flex; align-items:center; gap:4px; padding:.2rem .45rem; border-radius:9999px; font-weight:600; font-size:11px; }
+    .btn-buy{ width:100%; text-align:center; padding:.55rem .75rem; border-radius:12px; background:#7c3aed; color:#fff; font-weight:600; }
+    .btn-buy:hover{ background:#6d28d9; }
   </style>
 </head>
 <body class="min-h-screen text-slate-100 bg-app">
@@ -64,49 +81,22 @@
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="relative">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16 grid lg:grid-cols-2 gap-10 items-center">
-      <div>
-        <p class="inline-flex items-center gap-2 rounded-full border border-violet-400/30 bg-violet-600/10 px-3 py-1 text-[11px] text-violet-200">Nuevo</p>
-        <h1 class="mt-3 text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight">
-          Seguridad y <span class="text-violet-300">confianza</span> para tus plataformas
-        </h1>
-        <p class="mt-3 text-slate-300/90 max-w-prose">
-          Catálogo con precios por <strong>1 mes</strong>, <strong>3 meses</strong> y <strong>1 año</strong>. Contacto directo por WhatsApp.
-        </p>
-        <div class="mt-6 flex flex-col sm:flex-row gap-3">
-          <a href="#catalogo" class="px-5 py-3 rounded-xl bg-violet-600 text-white hover:bg-violet-700 font-semibold shadow">Ver catálogo</a>
-          <a id="btnWhatsHero" target="_blank" rel="noopener" class="px-5 py-3 rounded-xl border border-white/20 hover:border-emerald-400/60 font-semibold">Escríbenos al WhatsApp</a>
-        </div>
-        <p class="mt-4 text-xs text-slate-300/80">WhatsApp: <span class="font-semibold">+51 929 162 254</span></p>
-      </div>
-      <div class="grid grid-cols-5 gap-3 opacity-80">
-        <div class="aspect-square rounded-xl border border-white/10 bg-white/5 flex items-center justify-center text-xs">Netflix</div>
-        <div class="aspect-square rounded-xl border border-white/10 bg-white/5 flex items-center justify-center text-xs">Prime</div>
-        <div class="aspect-square rounded-xl border border-white/10 bg-white/5 flex items-center justify-center text-xs">Disney</div>
-        <div class="aspect-square rounded-xl border border-white/10 bg-white/5 flex items-center justify-center text-xs">Max</div>
-        <div class="aspect-square rounded-xl border border-white/10 bg-white/5 flex items-center justify-center text-xs">Star+</div>
-      </div>
-    </div>
+  <!-- Hero corto -->
+  <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
+    <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-center">Catálogo de plataformas</h1>
+    <p class="mt-2 text-center text-slate-300/90">Todas las tarjetas tienen el mismo tamaño y los logos centrados.</p>
   </section>
 
   <!-- Catálogo -->
-  <section id="catalogo" class="py-14">
+  <section id="catalogo" class="pb-14">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-extrabold tracking-tight text-center">Catálogo</h2>
-      <p class="mt-2 text-center text-slate-300/90 max-w-2xl mx-auto">Todas las tarjetas tienen el mismo tamaño. Da clic y te abrimos WhatsApp con el plan y precio.</p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="gridProductos">
 
-      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="gridProductos">
-
-        <!-- YOUTUBE -->
+        <!-- YOUTUBE PREMIUM -->
         <article class="card">
           <div class="card-head bg-gradient-to-r from-rose-500 via-fuchsia-500 to-indigo-600">YOUTUBE PREMIUM</div>
-         <div class="img-wrap">
-  <img class="logo-img" alt="YouTube Premium" src="imagenes/youtubepremiumlogo.webp" />
-</div>
+          <div class="img-wrap"><img class="logo-img" alt="YouTube Premium" src="imagenes/youtubepremiumlogo.webp" /></div>
           <div class="p-6">
-            <p class="text-xs text-slate-300/80">YouTube + Music (Plan familiar aparte). Consulta disponibilidad.</p>
             <div class="mt-3 flex flex-wrap gap-2">
               <span class="chip bg-yellow-100/90 text-yellow-800">S/ 3.00 · 1 mes</span>
               <span class="chip bg-emerald-100/90 text-emerald-800">S/ 9.00 · 3 meses</span>
@@ -264,7 +254,7 @@
           </div>
         </article>
 
-        <!-- MAX (HBO MAX) -->
+        <!-- MAX -->
         <article class="card">
           <div class="card-head bg-gradient-to-r from-indigo-700 to-blue-700">MAX</div>
           <div class="img-wrap"><img class="logo-img" alt="Max" src="imagenes/hbomaxlogo.png" /></div>
@@ -376,7 +366,7 @@
         <article class="card">
           <div class="card-head bg-gradient-to-r from-lime-500 to-green-600">IPTV</div>
           <div class="img-wrap"><img class="logo-img" alt="IPTV" src="imagenes/iptvlogo.jpg" /></div>
-        <div class="p-6">
+          <div class="p-6">
             <div class="mt-3 flex flex-wrap gap-2">
               <span class="chip bg-yellow-100/90 text-yellow-800">S/ 30 · 1 mes</span>
               <span class="chip bg-emerald-100/90 text-emerald-800">S/ 85 · 3 meses</span>
@@ -452,29 +442,6 @@
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section id="faq" class="py-16 bg-slate-900/40">
-    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-extrabold tracking-tight text-center">Preguntas frecuentes</h2>
-      <div class="mt-8 divide-y divide-white/10" id="faqRoot">
-        <details class="group py-4">
-          <summary class="flex cursor-pointer items-center justify-between text-left list-none">
-            <span class="font-semibold">¿Pueden gestionar todo por mí?</span>
-            <span class="transition group-open:rotate-180">⌄</span>
-          </summary>
-          <div class="mt-2 text-slate-300 text-sm">Sí, te guiamos paso a paso para activar tus suscripciones.</div>
-        </details>
-        <details class="group py-4">
-          <summary class="flex cursor-pointer items-center justify-between text-left list-none">
-            <span class="font-semibold">¿Cómo se contactan?</span>
-            <span class="transition group-open:rotate-180">⌄</span>
-          </summary>
-          <div class="mt-2 text-slate-300 text-sm">Directo por WhatsApp al <strong>+51 929 162 254</strong> desde los botones del catálogo.</div>
-        </details>
-      </div>
-    </div>
-  </section>
-
   <!-- Contacto -->
   <section id="contacto" class="py-16">
     <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
@@ -518,28 +485,21 @@
 
   <!-- JS -->
   <script>
-    // Configura tu número
     const PHONE = '51929162254';
     const MENSAJE_BASE = 'Hola, vengo de la web de Plataformas Aiden Barreto. Quiero más info.';
-
     const linkWhats = (texto) => `https://wa.me/${PHONE}?text=${encodeURIComponent(texto)}`;
 
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Menú móvil
     document.getElementById('menuBtn')?.addEventListener('click', () => {
       document.getElementById('mobileMenu')?.classList.toggle('hidden');
     });
 
-    // Botones WhatsApp
     const txtHeader = MENSAJE_BASE;
     document.getElementById('btnWhatsHeader').href = linkWhats(txtHeader);
     document.getElementById('btnWhatsMobile').href = linkWhats(txtHeader);
-    document.getElementById('btnWhatsHero').href = linkWhats('Hola, quiero consultar sobre el catálogo (1 mes / 3 meses / 1 año).');
 
-    // Convertir todos los links .btn-buy en botones reales y abrir WhatsApp
     document.querySelectorAll('[data-whats]').forEach(btn => {
-      btn.classList.add('btn-buy');
       btn.addEventListener('click', (e) => {
         e.preventDefault();
         const servicio = btn.getAttribute('data-servicio');
@@ -589,4 +549,3 @@
   </script>
 </body>
 </html>
-
