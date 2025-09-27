@@ -56,8 +56,14 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0,1fr));
   gap: .5rem;
-}
-  </style>
+    align-items:center;
+  }
+
+  /* --- Para pantallas muy chicas --- */
+  @media (max-width: 400px){
+    .chip{ font-size:10px; padding:.28rem .45rem; }
+  }
+</style>
 
   <!-- Schema.org (básico) -->
   <script type="application/ld+json">
@@ -696,6 +702,7 @@ form?.addEventListener('submit', async (e) => {
   </script>
 </body>
 </html>
+
 
 
 
